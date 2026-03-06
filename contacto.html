@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Agrotimes S.A.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(163, 27, 32, 0.3);
+            transition: all 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #83151f;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(163, 27, 32, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/images/logo_white.png" alt="Agrotimes S.A." id="header-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="#" class="lang-option">
+                <img src="https://flagcdn.com/24x18/uy.png" alt="Español">
+                Español/Spanish
+            </a>
+            <a href="#" class="lang-option">
+                <img src="https://flagcdn.com/24x18/gb.png" alt="English">
+                English
+            </a>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contáctenos</h2>
+            <p><strong>Dirección:</strong><br> San Ramon 8031 1800 Montevideo, Uruguay</p>
+            <br>
+            <p><strong>Teléfonos:</strong><br> (+598) 2 2002313</p>
+            <br>
+            <p><strong>Email:</strong><br> <a href="mailto:info@agrotimes.com.uy">info@agrotimes.com.uy</a></p>
+            <br>
+            <p><strong>Síguenos:</strong><br> <a href="https://www.facebook.com/agrotimesuruguay/"
+                    target="_blank">AGROTIMES en Facebook</a></p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Envíenos su consulta</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="text" name="subject" placeholder="Asunto" required>
+                <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contact">
+            <h4>Información de contacto</h4>
+            <p>San Ramon 8031 1800 Montevideo, Uruguay</p>
+            <p>Tel: (+598) 2 2002313</p>
+            <p>Email: info@agrotimes.com.uy</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/agrotimesuruguay/" target="_blank"
+                style="color:white; text-decoration:none;">Facebook</a>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
