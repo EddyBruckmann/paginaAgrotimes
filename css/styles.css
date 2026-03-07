@@ -656,11 +656,13 @@ nav.container {
     padding: 1rem;
     transition: var(--transition);
     border: 1px solid var(--gray-light);
+    cursor: pointer;
 }
 
 .product-item:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-5px);
+    border-color: var(--secondary-color);
 }
 
 .product-image {
@@ -988,5 +990,193 @@ footer {
 
     .page-header h1 {
         font-size: 2.5rem;
+    }
+}
+
+/* Product Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 34, 28, 0.4);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-container {
+    background: var(--bg-color);
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(44, 34, 28, 0.05);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.modal-gallery {
+    flex: 1;
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.modal-main-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.modal-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.thumb-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.thumb-item.active {
+    border-color: var(--primary-color);
+}
+
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details {
+    flex: 1;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.modal-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.modal-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.modal-desc-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.modal-desc-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.modal-description {
+    color: var(--gray-text);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.modal-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Mobile Adjustments for Modal */
+@media (max-width: 768px) {
+    .modal-container {
+        flex-direction: column;
+        max-height: 95vh;
+    }
+
+    .modal-details {
+        padding: 2rem;
+    }
+
+    .modal-title {
+        font-size: 1.75rem;
+    }
+
+    .modal-overlay {
+        padding: 1rem;
     }
 }

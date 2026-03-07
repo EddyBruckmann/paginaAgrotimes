@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos | Agrotimes S.A.</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/images/logo_light_icon.png" type="image/png" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         /* Filtering state classes */
@@ -158,10 +160,10 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-mitones.jpg" alt="Mitones Térmicos">
+                    <img src="assets/images/fotos reales/mitones.png" alt="Mitones">
                 </div>
                 <div class="product-info">
-                    <h3 data-i18n="prod_mitones_termicos">Mitones Térmicos</h3>
+                    <h3 data-i18n="prod_mitones">Mitones</h3>
                     <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
@@ -638,7 +640,52 @@
                 });
             });
         });
+
+        // Add events to products catalog
+        document.querySelectorAll('.product-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const title = item.querySelector('h3').textContent.toLowerCase().replace(/\s+/g, '-');
+                openProductModal(title);
+            });
+        });
     </script>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-gallery">
+                <div class="modal-main-image">
+                    <img id="modal-main-img" src="" alt="Vista de producto">
+                </div>
+                <div id="modal-thumbnails" class="modal-thumbnails">
+                    <!-- Thumbnails will be injected by JS -->
+                </div>
+            </div>
+
+            <div class="modal-details">
+                <div id="modal-category" class="modal-category">CATEGORÍA</div>
+                <h2 id="modal-title" class="modal-title">Nombre del Producto</h2>
+
+                <h4 class="modal-desc-title" data-i18n="prod_modal_desc">Descripción del producto</h4>
+                <p id="modal-description" class="modal-description">
+                    Descripción detallada del producto cargada dinámicamente.
+                </p>
+
+                <div class="modal-actions">
+                    <a href="contacto.html" class="btn btn-primary" data-i18n="prod_consultar_btn">Consultar por esta
+                        prenda</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
 </body>

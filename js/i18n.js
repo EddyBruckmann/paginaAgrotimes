@@ -57,6 +57,8 @@ const translations = {
         prod_filter_gorros: "Gorros",
         prod_filter_mitones: "Mitones",
         prod_consultar: "Consultar Precio",
+        prod_modal_desc: "Descripción del producto",
+        prod_consultar_btn: "Consultar por este producto",
 
         // Product names - Prendas
         prod_chaqueta_cockpit: "Cockpit",
@@ -186,6 +188,8 @@ const translations = {
         prod_filter_gorros: "Hats",
         prod_filter_mitones: "Mittens",
         prod_consultar: "Request Price",
+        prod_modal_desc: "Product description",
+        prod_consultar_btn: "Inquire about this product",
 
         // Product names - Prendas (proper names stay the same)
         prod_chaqueta_cockpit: "Cockpit",
