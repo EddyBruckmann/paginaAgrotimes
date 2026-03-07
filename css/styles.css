@@ -615,9 +615,37 @@ footer {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: 2fr 1fr 1.5fr;
     gap: 3rem;
     margin-bottom: 4rem;
+}
+
+/* Language Switcher Button */
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--gray-light);
+    background: transparent;
+    color: var(--gray-text);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(142, 74, 35, 0.05);
+}
+
+.lang-btn svg {
+    flex-shrink: 0;
 }
 
 .footer-logo {

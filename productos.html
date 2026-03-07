@@ -26,14 +26,23 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-                <li><a href="productos.html" class="active">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-i18n="nav_quienes">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html" class="active" data-i18n="nav_productos">Productos</a></li>
+                <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="productos.html" class="btn btn-primary">Explorar</a>
+                <button id="lang-switch" class="lang-btn" onclick="toggleLanguage()" title="Switch to English">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    <span>EN</span>
+                </button>
+                <a href="productos.html" class="btn btn-primary" data-i18n="nav_explorar">Explorar</a>
             </div>
         </nav>
     </header>
@@ -41,16 +50,17 @@
     <!-- Page Header & Filters -->
     <div class="container">
         <header class="page-header">
-            <h1>Catálogo de Productos</h1>
-            <p style="color: var(--gray-text);">Explore nuestra exclusiva selección de prendas, gorros y mitones de
+            <h1 data-i18n="prod_title">Catálogo de Productos</h1>
+            <p style="color: var(--gray-text);" data-i18n="prod_desc">Explore nuestra exclusiva selección de prendas,
+                gorros y mitones de
                 cuero lanar.</p>
         </header>
 
         <div class="filters-wrapper">
-            <button class="filter-btn active" data-filter="all">Todo</button>
-            <button class="filter-btn" data-filter="prendas">Prendas</button>
-            <button class="filter-btn" data-filter="gorros">Gorros</button>
-            <button class="filter-btn" data-filter="mitones">Mitones</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="prod_filter_todo">Todo</button>
+            <button class="filter-btn" data-filter="prendas" data-i18n="prod_filter_prendas">Prendas</button>
+            <button class="filter-btn" data-filter="gorros" data-i18n="prod_filter_gorros">Gorros</button>
+            <button class="filter-btn" data-filter="mitones" data-i18n="prod_filter_mitones">Mitones</button>
         </div>
 
         <!-- Products Grid -->
@@ -65,11 +75,11 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Chaqueta de Cuero Classic">
+                    <img src="assets/images/fotos reales/cokpit.png" alt="Chaqueta de Cuero cockpit">
                 </div>
                 <div class="product-info">
-                    <h3>Chaqueta de Cuero Classic</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_chaqueta_cockpit">Cockpit</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -83,11 +93,11 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Abrigo Lanar Extendido">
+                    <img src="assets/images/fotos reales/manuel.png" alt="Abrigo Manuel">
                 </div>
                 <div class="product-info">
-                    <h3>Abrigo Lanar Extendido</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_abrigo_lanar">Manuel</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -104,8 +114,8 @@
                     <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Bomber Premium">
                 </div>
                 <div class="product-info">
-                    <h3>Bomber Premium</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_bomber">Bomber Premium</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -122,8 +132,8 @@
                     <img src="assets/images/fotosNuevas/product-mitones.jpg" alt="Mitones Térmicos">
                 </div>
                 <div class="product-info">
-                    <h3>Mitones Térmicos</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_mitones_termicos">Mitones Térmicos</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -137,11 +147,11 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-gorros.jpg" alt="Gorro de Aviador">
+                    <img src="assets/images/fotos reales/aviador.png" alt="Gorro de Aviador">
                 </div>
                 <div class="product-info">
-                    <h3>Gorro de Aviador</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_gorro_aviador">Gorro de Aviador</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -158,8 +168,8 @@
                     <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Chaqueta Doble Faz">
                 </div>
                 <div class="product-info">
-                    <h3>Chaqueta Doble Faz</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_chaqueta_doble">Chaqueta Doble Faz</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -176,8 +186,8 @@
                     <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Tapado Largo Lanar">
                 </div>
                 <div class="product-info">
-                    <h3>Tapado Largo Lanar</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_tapado_largo">Tapado Largo Lanar</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -194,8 +204,8 @@
                     <img src="assets/images/fotosNuevas/product-prendas.jpg" alt="Chaqueta Aviador">
                 </div>
                 <div class="product-info">
-                    <h3>Chaqueta Aviador</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_chaqueta_aviador">Chaqueta Aviador</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -209,11 +219,11 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-gorros.jpg" alt="Gorro Ushanka">
+                    <img src="assets/images/fotos reales/6p.png" alt="Gorro 6p">
                 </div>
                 <div class="product-info">
-                    <h3>Gorro Ushanka</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_gorro_6p">Gorro 6p</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -227,11 +237,11 @@
                     </svg>
                 </button>
                 <div class="product-image">
-                    <img src="assets/images/fotosNuevas/product-gorros.jpg" alt="Gorro de Caza">
+                    <img src="assets/images/fotos reales/rhapsody.png" alt="Gorro Rhapsody">
                 </div>
                 <div class="product-info">
-                    <h3>Gorro de Caza</h3>
-                    <div class="product-price">Consultar Precio</div>
+                    <h3 data-i18n="prod_gorro_rhapsody">Gorro Rhapsody</h3>
+                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
                 </div>
             </div>
 
@@ -248,7 +258,8 @@
                         <img src="assets/images/logo.png" alt="Agrotimes Icon" class="logo-img">
                         <div class="logo-text">AGROTIMES <span>S.A.</span></div>
                     </div>
-                    <p class="footer-desc">Líderes en la producción artesanal y exportación de cueros lanares de origen
+                    <p class="footer-desc" data-i18n="footer_desc">Líderes en la producción artesanal y exportación de
+                        cueros lanares de origen
                         uruguayo. Calidad certificada internacionalmente para los mercados globales más exigentes.</p>
                     <div class="footer-social-links">
                         <a href="https://www.facebook.com/agrotimesuruguay/" target="_blank"
@@ -269,7 +280,7 @@
 
                 <!-- Contact Column -->
                 <div class="footer-column">
-                    <h4>CONTACTO</h4>
+                    <h4 data-i18n="footer_contacto">CONTACTO</h4>
                     <div class="contact-item">
                         <svg viewBox="0 0 24 24">
                             <path
@@ -293,24 +304,16 @@
                     </div>
                 </div>
 
-                <!-- Quick Links Column -->
-                <div class="footer-column">
-                    <h4>ENLACES RÁPIDOS</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Nuestros Procesos</a></li>
-                        <li><a href="#">Catálogo de Exportación</a></li>
-                        <li><a href="#">Sostenibilidad</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                    </ul>
-                </div>
+
 
                 <!-- Newsletter Column -->
                 <div class="footer-column">
-                    <h4>NEWSLETTER</h4>
-                    <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Reciba
+                    <h4 data-i18n="footer_newsletter">NEWSLETTER</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7);"
+                        data-i18n="footer_newsletter_desc">Reciba
                         actualizaciones sobre nuevas colecciones y tendencias de mercado.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Su email" required>
+                        <input type="email" placeholder="Su email" required data-i18n="footer_email_placeholder">
                         <button type="submit" class="newsletter-btn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
@@ -321,11 +324,11 @@
             </div>
 
             <div class="footer-bottom">
-                <div>&copy; 2026 AGROTIMES S.A. Todos los derechos reservados.</div>
+                <div data-i18n="footer_copyright">&copy; 2026 AGROTIMES S.A. Todos los derechos reservados.</div>
                 <div class="footer-legal-links">
-                    <a href="#">Privacidad</a>
-                    <a href="#">Términos</a>
-                    <a href="#">Cookies</a>
+                    <a href="#" data-i18n="footer_privacidad">Privacidad</a>
+                    <a href="#" data-i18n="footer_terminos">Términos</a>
+                    <a href="#" data-i18n="footer_cookies">Cookies</a>
                 </div>
             </div>
         </div>
@@ -393,6 +396,7 @@
             });
         });
     </script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

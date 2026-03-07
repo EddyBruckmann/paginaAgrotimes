@@ -133,14 +133,23 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-i18n="nav_quienes">¿Quiénes Somos?</a></li>
+                <li><a href="productos.html" data-i18n="nav_productos">Productos</a></li>
+                <li><a href="contacto.html" class="active" data-i18n="nav_contacto">Contacto</a></li>
             </ul>
 
             <div class="nav-actions">
-                <a href="productos.html" class="btn btn-primary">Explorar</a>
+                <button id="lang-switch" class="lang-btn" onclick="toggleLanguage()" title="Switch to English">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    <span>EN</span>
+                </button>
+                <a href="productos.html" class="btn btn-primary" data-i18n="nav_explorar">Explorar</a>
             </div>
         </nav>
     </header>
@@ -149,57 +158,63 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-header">
-                <div class="badge">SOPORTE AL CLIENTE</div>
-                <h1>Contáctenos</h1>
-                <p>Estamos aquí para ayudarle. Póngase en contacto con nuestro equipo para consultas, pedidos o
+                <div class="badge" data-i18n="contact_badge">SOPORTE AL CLIENTE</div>
+                <h1 data-i18n="contact_title">Contáctenos</h1>
+                <p data-i18n="contact_desc">Estamos aquí para ayudarle. Póngase en contacto con nuestro equipo para
+                    consultas, pedidos o
                     información sobre exportaciones.</p>
             </div>
 
             <div class="contact-container">
                 <!-- Info Column -->
                 <div class="contact-info">
-                    <h2>Información Directa</h2>
+                    <h2 data-i18n="contact_info_title">Información Directa</h2>
 
                     <div class="info-group">
-                        <h3>Dirección</h3>
+                        <h3 data-i18n="contact_direccion">Dirección</h3>
                         <p>San Ramon 8031<br>1800 Montevideo, Uruguay<br>Distrito Industrial Las Piedras</p>
                     </div>
 
                     <div class="info-group">
-                        <h3>Teléfono</h3>
+                        <h3 data-i18n="contact_telefono">Teléfono</h3>
                         <p>+598 2 2002313<br>+598 2900 1234</p>
                     </div>
 
                     <div class="info-group">
-                        <h3>Email</h3>
+                        <h3 data-i18n="contact_email">Email</h3>
                         <a href="mailto:info@agrotimes.com.uy">info@agrotimes.com.uy</a>
                     </div>
 
                     <div class="info-group">
-                        <h3>Redes Sociales</h3>
+                        <h3 data-i18n="contact_redes">Redes Sociales</h3>
                         <a href="https://www.facebook.com/agrotimesuruguay/" target="_blank"
-                            style="color: var(--primary-color);">AGROTIMES en Facebook &rarr;</a>
+                            style="color: var(--primary-color);" data-i18n="contact_redes_link">AGROTIMES en Facebook
+                            &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Form Column -->
                 <div class="contact-form">
-                    <h2>Envíenos su consulta</h2>
+                    <h2 data-i18n="contact_form_title">Envíenos su consulta</h2>
                     <form action="#" method="POST">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Nombre completo" required>
+                            <input type="text" name="name" class="form-control" placeholder="Nombre completo" required
+                                data-i18n="contact_nombre">
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
-                                required>
+                                required data-i18n="contact_correo">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Asunto" required>
+                            <input type="text" name="subject" class="form-control" placeholder="Asunto" required
+                                data-i18n="contact_asunto">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Mensaje" required></textarea>
+                            <textarea name="message" class="form-control" placeholder="Mensaje" required
+                                data-i18n="contact_mensaje"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary-alt btn-large" style="width: 100%;">Enviar
+                        <button type="submit" class="btn btn-primary-alt btn-large" style="width: 100%;"
+                            data-i18n="contact_enviar">Enviar
                             Mensaje</button>
                     </form>
                 </div>
@@ -217,7 +232,8 @@
                         <img src="assets/images/logo.png" alt="Agrotimes Icon" class="logo-img">
                         <div class="logo-text">AGROTIMES <span>S.A.</span></div>
                     </div>
-                    <p class="footer-desc">Líderes en la producción artesanal y exportación de cueros lanares de origen
+                    <p class="footer-desc" data-i18n="footer_desc">Líderes en la producción artesanal y exportación de
+                        cueros lanares de origen
                         uruguayo. Calidad certificada internacionalmente para los mercados globales más exigentes.</p>
                     <div class="footer-social-links">
                         <a href="https://www.facebook.com/agrotimesuruguay/" target="_blank"
@@ -238,7 +254,7 @@
 
                 <!-- Contact Column -->
                 <div class="footer-column">
-                    <h4>CONTACTO</h4>
+                    <h4 data-i18n="footer_contacto">CONTACTO</h4>
                     <div class="contact-item">
                         <svg viewBox="0 0 24 24">
                             <path
@@ -262,24 +278,16 @@
                     </div>
                 </div>
 
-                <!-- Quick Links Column -->
-                <div class="footer-column">
-                    <h4>ENLACES RÁPIDOS</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Nuestros Procesos</a></li>
-                        <li><a href="#">Catálogo de Exportación</a></li>
-                        <li><a href="#">Sostenibilidad</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                    </ul>
-                </div>
+
 
                 <!-- Newsletter Column -->
                 <div class="footer-column">
-                    <h4>NEWSLETTER</h4>
-                    <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Reciba
+                    <h4 data-i18n="footer_newsletter">NEWSLETTER</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.7);"
+                        data-i18n="footer_newsletter_desc">Reciba
                         actualizaciones sobre nuevas colecciones y tendencias de mercado.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Su email" required>
+                        <input type="email" placeholder="Su email" required data-i18n="footer_email_placeholder">
                         <button type="submit" class="newsletter-btn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
@@ -290,15 +298,16 @@
             </div>
 
             <div class="footer-bottom">
-                <div>&copy; 2026 AGROTIMES S.A. Todos los derechos reservados.</div>
+                <div data-i18n="footer_copyright">&copy; 2026 AGROTIMES S.A. Todos los derechos reservados.</div>
                 <div class="footer-legal-links">
-                    <a href="#">Privacidad</a>
-                    <a href="#">Términos</a>
-                    <a href="#">Cookies</a>
+                    <a href="#" data-i18n="footer_privacidad">Privacidad</a>
+                    <a href="#" data-i18n="footer_terminos">Términos</a>
+                    <a href="#" data-i18n="footer_cookies">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>
