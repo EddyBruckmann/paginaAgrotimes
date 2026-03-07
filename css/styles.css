@@ -169,8 +169,8 @@ nav.container {
 
 /* Custom Image Logo using Wrapper and Filters */
 .logo-img {
-    height: 1.1em;
-    /* Matches the text visually */
+    height: 32px;
+    /* Fixed height for consistency */
     width: auto;
     object-fit: contain;
     /* Use filters to make the shape absolutely black */
@@ -197,6 +197,110 @@ nav.container {
     font-weight: 500;
     color: var(--gray-text);
     position: relative;
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    z-index: 1000;
+    transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobile-nav-links a {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.mobile-nav-links a.active {
+    color: var(--primary-color);
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.mobile-nav-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.mobile-nav-actions .lang-btn {
+    display: flex !important;
+    /* Force visibility in mobile menu */
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.mobile-nav-actions .btn-primary {
+    display: flex !important;
+    /* Force visibility in mobile menu */
+    width: 100%;
+    max-width: 250px;
 }
 
 .nav-links a:hover,
@@ -803,23 +907,75 @@ footer {
         font-size: 3rem;
     }
 
+    nav.container {
+        height: 70px;
+    }
+
+    .logo-container {
+        font-size: 1.1rem;
+        gap: 0.6rem;
+    }
+
+    .logo-img {
+        height: 28px;
+    }
+
     .footer-top {
         grid-template-columns: 1fr;
     }
 
     .nav-links {
         display: none;
-        /* Add hamburger menu logic later if needed */
+    }
+
+    /* Hide desktop nav actions that will go into mobile menu */
+    .nav-actions .btn-primary,
+    .nav-actions .lang-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
     }
 
     .products-grid-catalog {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Product Filters Mobile Scroll */
+    .filters-wrapper {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 1rem 1rem;
+        margin: 0 -1rem 3rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .filters-wrapper::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .filter-btn {
+        flex-shrink: 0;
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .logo-container {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        height: 24px;
     }
 
     .products-grid-catalog {
@@ -828,5 +984,9 @@ footer {
 
     .categories-grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
     }
 }
