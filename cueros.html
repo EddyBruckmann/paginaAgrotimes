@@ -317,13 +317,6 @@
     </footer>
     <script src="js/main.js"></script>
     <script>
-        // Add events to products catalog
-        document.querySelectorAll('.product-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const title = item.querySelector('h3').textContent.toLowerCase().replace(/\s+/g, '-');
-                openProductModal(title);
-            });
-        });
     </script>
     <script src="js/i18n.js"></script>
 </body>
