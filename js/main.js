@@ -29,19 +29,19 @@ const productData = {
         title: 'Cockpit',
         category: 'Prendas',
         description: 'Chaqueta de cuero lanar con lana de alta calidad. Un diseño clásico inspirado en la aviación, combinando durabilidad mecánica con un confort térmico excepcional para climas fríos.',
-        images: ['assets/images/fotos reales/cokpit.png', 'assets/images/fotos reales/cokpitv2.png']
+        images: ['assets/images/fotos reales/cokpitv2.png', 'assets/images/fotos reales/cokpit2.png']
     },
     'manuel': {
         title: 'Manuel',
         category: 'Prendas',
         description: 'Abrigo de cuero lanar premium. Confeccionado con las técnicas más finas de selección de materia prima, este modelo ofrece una cobertura total con un estilo sobrio y elegante.',
-        images: ['assets/images/fotos reales/Manuel.png', 'assets/images/fotos reales/Manuel.png']
+        images: ['assets/images/fotos reales/Manuel.png', 'assets/images/fotos reales/Manuel2.png']
     },
     'doll': {
         title: 'Doll',
         category: 'Prendas',
         description: 'Modelo Doll: sofisticación en cuero. Una prenda versátil diseñada para adaptarse a diferentes siluetas, manteniendo siempre la calidez característica de nuestros productos de exportación.',
-        images: ['assets/images/fotos reales/doll.png', 'assets/images/fotos reales/doll.png']
+        images: ['assets/images/fotos reales/doll.png', 'assets/images/fotos reales/doll2.png']
     },
     'mitones': {
         title: 'Mitones',
@@ -83,7 +83,7 @@ const productData = {
         title: 'Rufus',
         category: 'Prendas',
         description: 'Modelo Rufus: versatilidad y resistencia. Una prenda pensada para el uso intensivo sin sacrificar la estética de alta gama propia de Agrotimes.',
-        images: ['assets/images/fotos reales/rufus.png', 'assets/images/fotos reales/rufus2.png']
+        images: ['assets/images/fotos reales/rufus.png', 'assets/images/fotos reales/rufus3.png', 'assets/images/fotos reales/rufus2.png']
     },
     'roy': {
         title: 'Roy',
@@ -301,6 +301,14 @@ function openProductModal(productId) {
         });
         thumbContainer.appendChild(thumb);
     });
+
+    // Update contact link with product subject and message
+    const contactBtn = modal.querySelector('.modal-actions .btn');
+    if (contactBtn) {
+        const subject = encodeURIComponent(`Consulta por: ${data.title}`);
+        const message = encodeURIComponent(`Hola, me gustaría recibir más información y asesoramiento sobre el producto: ${data.title}. Muchas gracias.`);
+        contactBtn.href = `contacto.html?asunto=${subject}&mensaje=${message}`;
+    }
 
     // Show modal
     modal.classList.add('active');

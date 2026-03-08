@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Agrotimes S.A.</title>
-    <link rel="icon" href="assets/images/logo.png" type="image/png" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="assets/images/logo_light_icon.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="assets/images/logoVec.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/images/logoVecInvertido.png" type="image/png" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .contact-section {
-            padding: 6rem 0;
+            padding: 2rem 0 6rem;
             background-color: var(--bg-color);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
         }
 
         .contact-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .contact-header h1 {
-            font-size: clamp(3rem, 5vw, 4.5rem);
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 0.5rem;
             line-height: 1.1;
             font-weight: 900;
         }
@@ -36,14 +39,15 @@
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            max-width: 1000px;
+            gap: 3rem;
+            max-width: 1100px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .contact-info {
             background: var(--white);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 1rem;
             box-shadow: var(--shadow-sm);
             border: 1px solid rgba(44, 34, 28, 0.05);
@@ -77,7 +81,7 @@
 
         .contact-form {
             background: var(--white);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 1rem;
             box-shadow: var(--shadow-md);
             border: 1px solid rgba(44, 34, 28, 0.05);
@@ -189,7 +193,6 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-header">
-                <div class="badge" data-i18n="contact_badge">SOPORTE AL CLIENTE</div>
                 <h1 data-i18n="contact_title">Contáctenos</h1>
                 <p data-i18n="contact_desc">Estamos aquí para ayudarle. Póngase en contacto con nuestro equipo para
                     consultas, pedidos o
@@ -321,6 +324,26 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        // Auto-fill subject and message from URL parameters
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Fill Subject
+            const asunto = urlParams.get('asunto');
+            if (asunto) {
+                const subjectInput = document.querySelector('input[name="subject"]');
+                if (subjectInput) subjectInput.value = asunto;
+            }
+
+            // Fill Message
+            const mensaje = urlParams.get('mensaje');
+            if (mensaje) {
+                const messageInput = document.querySelector('textarea[name="message"]');
+                if (messageInput) messageInput.value = mensaje;
+            }
+        });
+    </script>
     <script src="js/i18n.js"></script>
 </body>
 
