@@ -29,13 +29,13 @@ const productData = {
         title: 'Cockpit',
         category: 'Prendas',
         description: 'Chaqueta de cuero lanar con lana de alta calidad. Un diseño clásico inspirado en la aviación, combinando durabilidad mecánica con un confort térmico excepcional para climas fríos.',
-        images: ['assets/images/fotos reales/cokpitv2.png', 'assets/images/fotos reales/cokpit2.png']
+        images: ['assets/images/fotos reales/cokpitv2.png', 'assets/images/fotos reales/cockpit2.png']
     },
     'manuel': {
         title: 'Manuel',
         category: 'Prendas',
         description: 'Abrigo de cuero lanar premium. Confeccionado con las técnicas más finas de selección de materia prima, este modelo ofrece una cobertura total con un estilo sobrio y elegante.',
-        images: ['assets/images/fotos reales/Manuel.png', 'assets/images/fotos reales/Manuel2.png']
+        images: ['assets/images/fotos reales/Manuel.png', 'assets/images/fotos reales/Manuel2.png', 'assets/images/fotos reales/manuel3.png']
     },
     'doll': {
         title: 'Doll',
@@ -53,25 +53,25 @@ const productData = {
         title: 'Gorro de Aviador',
         category: 'Gorros',
         description: 'Máxima protección contra el viento y el frío. El icónico gorro de aviador con interior de lana suave, materiales seleccionados artesanalmente para una durabilidad superior.',
-        images: ['assets/images/fotos reales/aviador.png', 'assets/images/fotos reales/aviador.png']
+        images: ['assets/images/fotos reales/aviador.png', 'assets/images/fotos reales/aviador2.png']
     },
     'manuela': {
         title: 'Manuela',
         category: 'Prendas',
         description: 'Elegancia y calidez en una sola prenda. El modelo Manuela destaca por su corte refinado y la suavidad de su lana, ideal para quienes buscan calidad sin compromisos.',
-        images: ['assets/images/fotos reales/manuela.png', 'assets/images/fotos reales/manuela.png']
+        images: ['assets/images/fotos reales/manuela.png', 'assets/images/fotos reales/manuela2.png']
     },
     'trenca': {
         title: 'Trenca',
         category: 'Prendas',
         description: 'Un clásico renovado. Nuestra trenca de cuero lanar es la pieza perfecta para cualquier invierno, combinando la tradición artesanal de Agrotimes con un estilo atemporal.',
-        images: ['assets/images/fotos reales/trenca.png', 'assets/images/fotos reales/trenca2.png']
+        images: ['assets/images/fotos reales/trenca.png', 'assets/images/fotos reales/trenca2.png', 'assets/images/fotos reales/trenca3.png']
     },
     'jlo-biker': {
         title: 'JLO Biker',
         category: 'Prendas',
         description: 'Estilo audaz con la mejor materia prima. La chaqueta Biker JLO fusiona el diseño urbano con la calidez del cuero lanar, creando una pieza única en su clase.',
-        images: ['assets/images/fotos reales/biker.png', 'assets/images/fotos reales/biker.png']
+        images: ['assets/images/fotos reales/biker.png', 'assets/images/fotos reales/biker2.png']
     },
     'dominico': {
         title: 'Dominico',
@@ -89,37 +89,37 @@ const productData = {
         title: 'Roy',
         category: 'Prendas',
         description: 'El abrigo Roy destaca por su estructura impecable y su capacidad aislante, siendo uno de nuestros modelos más solicitados para climas extremos.',
-        images: ['assets/images/fotos reales/roy.png', 'assets/images/fotos reales/roy.png']
+        images: ['assets/images/fotos reales/roy.png', 'assets/images/fotos reales/roy2.png']
     },
     'mara': {
         title: 'Mara',
         category: 'Prendas',
         description: 'Mara es sinónimo de elegancia cotidiana. Un diseño que realza la figura mientras envuelve en la suavidad incomparable de nuestro cuero lanar de exportación.',
-        images: ['assets/images/fotos reales/mara.png', 'assets/images/fotos reales/mara.png']
+        images: ['assets/images/fotos reales/mara.png', 'assets/images/fotos reales/mara2.png']
     },
     'kelly': {
         title: 'Kelly',
         category: 'Prendas',
         description: 'Inspirado en la sofisticación clásica, el modelo Kelly ofrece acabados hechos a mano y una selección de lana curly de alta densidad.',
-        images: ['assets/images/fotos reales/kelly.png', 'assets/images/fotos reales/kelly.png']
+        images: ['assets/images/fotos reales/kelly.png', 'assets/images/fotos reales/kelly2.png']
     },
     'ines': {
         title: 'Ines',
         category: 'Prendas',
         description: 'La prenda Ines combina ligereza y calidez. Un diseño funcional con el sello de calidad certificado que nos representa en los mercados globales.',
-        images: ['assets/images/fotos reales/ines.png', 'assets/images/fotos reales/ines.png']
+        images: ['assets/images/fotos reales/ines.png', 'assets/images/fotos reales/ines2.png']
     },
     'frida': {
         title: 'Frida',
         category: 'Prendas',
         description: 'Originalidad y confort. El modelo Frida es una pieza de diseño que utiliza cueros con texturas exclusivas desarrolladas en nuestra propia curtiembre.',
-        images: ['assets/images/fotos reales/frida.png', 'assets/images/fotos reales/frida.png']
+        images: ['assets/images/fotos reales/frida.png', 'assets/images/fotos reales/frida2.png']
     },
     'del': {
         title: 'Del',
         category: 'Prendas',
         description: 'Simplicidad refinada. El modelo Del es perfecto para quienes buscan una prenda esencial de cuero lanar con la durabilidad de un producto artesanal.',
-        images: ['assets/images/fotos reales/Del.png', 'assets/images/fotos reales/Del.png']
+        images: ['assets/images/fotos reales/Del.png', 'assets/images/fotos reales/del2.png']
     },
     'b-52': {
         title: 'B-52',
@@ -137,7 +137,7 @@ const productData = {
         title: 'Anne',
         category: 'Prendas',
         description: 'Anne es delicadeza y calidad. Con detalles de costura a la vista y una suavidad extrema al tacto, es la elección ideal para el invierno urbano.',
-        images: ['assets/images/fotos reales/anne.png', 'assets/images/fotos reales/anne.png']
+        images: ['assets/images/fotos reales/anne.png', 'assets/images/fotos reales/anne2.png']
     },
     '3029': {
         title: '3029',
@@ -155,7 +155,7 @@ const productData = {
         title: 'Gorro 6P',
         category: 'Gorros',
         description: 'Gorro artesanal de cuero lanar, diseñado para ofrecer protección total con un ajuste cómodo. La lana natural permite una transpiración ideal manteniendo el calor.',
-        images: ['assets/images/fotos reales/6p.png', 'assets/images/fotos reales/6p.png']
+        images: ['assets/images/fotos reales/6p.png', 'assets/images/fotos reales/6p2.png']
     },
     'gorro-rhapsody': {
         title: 'Gorro Rhapsody',
@@ -305,8 +305,8 @@ function openProductModal(productId) {
     // Update contact link with product subject and message
     const contactBtn = modal.querySelector('.modal-actions .btn');
     if (contactBtn) {
-        const subject = encodeURIComponent(`Consulta por: ${data.title}`);
-        const message = encodeURIComponent(`Hola, me gustaría recibir más información y asesoramiento sobre el producto: ${data.title}. Muchas gracias.`);
+        const subject = encodeURIComponent(`Consulta por ${data.title}`);
+        const message = encodeURIComponent(`Hola, me gustaría recibir más información y asesoramiento sobre el producto ${data.title}. Muchas gracias.`);
         contactBtn.href = `contacto.html?asunto=${subject}&mensaje=${message}`;
     }
 

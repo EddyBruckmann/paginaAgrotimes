@@ -10,31 +10,18 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .contact-section {
-            padding: 2rem 0 6rem;
-            background-color: var(--bg-color);
-            min-height: 70vh;
+            position: relative;
+            padding: 2rem 0 4rem;
+            background: linear-gradient(rgba(250, 248, 245, 0.85), rgba(250, 248, 245, 0.85)), url('assets/images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
         }
 
-        .contact-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
 
-        .contact-header h1 {
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
-            font-weight: 900;
-        }
-
-        .contact-header p {
-            font-size: 1.125rem;
-            color: rgba(44, 34, 28, 0.7);
-            max-width: 600px;
-            margin: 0 auto;
-        }
 
         .contact-container {
             display: grid;
@@ -46,11 +33,13 @@
         }
 
         .contact-info {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(44, 34, 28, 0.05);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 3.5rem 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
         .contact-info h2 {
@@ -80,11 +69,13 @@
         }
 
         .contact-form {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(44, 34, 28, 0.05);
+            background: rgba(255, 255, 255, 1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 3.5rem 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         .contact-form h2 {
@@ -92,8 +83,15 @@
             margin-bottom: 2rem;
         }
 
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .form-control {
@@ -192,13 +190,6 @@
     <!-- Page Content -->
     <section class="contact-section">
         <div class="container">
-            <div class="contact-header">
-                <h1 data-i18n="contact_title">Contáctenos</h1>
-                <p data-i18n="contact_desc">Estamos aquí para ayudarle. Póngase en contacto con nuestro equipo para
-                    consultas, pedidos o
-                    información sobre exportaciones.</p>
-            </div>
-
             <div class="contact-container">
                 <!-- Info Column -->
                 <div class="contact-info">
@@ -231,23 +222,45 @@
 
                 <!-- Form Column -->
                 <div class="contact-form">
-                    <h2 data-i18n="contact_form_title">Envíenos su consulta</h2>
+                    <h2 data-i18n="contact_form_title" style="margin-bottom: 2rem;">Envíenos un Mensaje</h2>
                     <form action="#" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Nombre completo" required
-                                data-i18n="contact_nombre">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label
+                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
+                                    data-i18n="contact_label_nombre">Nombre</label>
+                                <input type="text" name="name" class="form-control" placeholder="Nombre completo"
+                                    required data-i18n="contact_nombre">
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
+                                    data-i18n="contact_label_email">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
+                                    required data-i18n="contact_correo">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label
+                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
+                                    data-i18n="contact_label_empresa">Empresa</label>
+                                <input type="text" name="company" class="form-control"
+                                    placeholder="Nombre de su empresa (opcional)" data-i18n="contact_empresa">
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
+                                    data-i18n="contact_label_asunto">Asunto</label>
+                                <input type="text" name="subject" class="form-control" placeholder="Asunto" required
+                                    data-i18n="contact_asunto">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
-                                required data-i18n="contact_correo">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" class="form-control" placeholder="Asunto" required
-                                data-i18n="contact_asunto">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Mensaje" required
-                                data-i18n="contact_mensaje"></textarea>
+                            <label style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
+                                data-i18n="contact_label_mensaje">Mensaje</label>
+                            <textarea name="message" class="form-control" placeholder="Cuéntenos sobre su consulta..."
+                                required data-i18n="contact_mensaje"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary-alt btn-large" style="width: 100%;"
                             data-i18n="contact_enviar">Enviar
