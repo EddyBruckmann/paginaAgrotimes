@@ -161,7 +161,7 @@ const productData = {
         title: 'Gorro Rhapsody',
         category: 'Gorros',
         description: 'Un diseño elegante y funcional. El gorro Rhapsody es suave al tacto y extremadamente abrigado, ideal para los inviernos más exigentes.',
-        images: ['assets/images/fotos reales/rhapsody.png', 'assets/images/fotos reales/rhapsody.png']
+        images: ['assets/images/fotos reales/rhapsody.png', 'assets/images/fotos reales/rhapsody2.png']
     },
     // Cueros
     'vintage-antik-salmon-wool': {

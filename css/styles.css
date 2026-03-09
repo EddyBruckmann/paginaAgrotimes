@@ -741,7 +741,7 @@ nav.container {
 footer {
     background-color: var(--footer-bg);
     color: rgba(255, 255, 255, 0.7);
-    padding: 5rem 0 2rem;
+    padding: 2.2rem 0 1rem;
     font-size: 0.9rem;
 }
 
@@ -749,7 +749,7 @@ footer {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 /* Language Switcher Button */
@@ -786,7 +786,7 @@ footer {
 }
 
 .footer-desc {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 300px;
     line-height: 1.8;
 }
@@ -881,7 +881,7 @@ footer {
 }
 
 .footer-bottom {
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
