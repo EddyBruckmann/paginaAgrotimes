@@ -125,7 +125,7 @@ const productData = {
         title: 'B-52',
         category: 'Prendas',
         description: 'Inspirada en las chaquetas de vuelo icónicas, la B-52 ofrece una protección superior contra el frío con un estilo robusto y masculino.',
-        images: ['assets/images/fotosNuevas/product-prendas.jpg', 'assets/images/fotosNuevas/product-prendas.jpg']
+        images: ['assets/images/fotos reales/b52.png', 'assets/images/fotos reales/b52-2.png']
     },
     'at-11': {
         title: 'AT-11',
@@ -143,7 +143,7 @@ const productData = {
         title: '3029',
         category: 'Prendas',
         description: 'Modelo 3029: Clásico industrial uruguayo. Una prenda que ha formado parte de nuestra historia de exportación gracias a su calidad inalterable.',
-        images: ['assets/images/fotosNuevas/product-prendas.jpg', 'assets/images/fotosNuevas/product-prendas.jpg']
+        images: ['assets/images/fotos reales/3029.png', 'assets/images/fotos reales/3029-2.png', 'assets/images/fotos reales/3029-3.png']
     },
     'silvana': {
         title: 'Silvana',

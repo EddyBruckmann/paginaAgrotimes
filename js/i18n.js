@@ -92,10 +92,16 @@ const translations = {
         about_title: "¿Quiénes Somos?",
         about_subtitle: "Descubra la pasión y dedicación detrás de cada una de nuestras piezas de cuero lanar.",
         about_empresa_title: "Nuestra Empresa",
-        about_p1: "Somos una empresa Uruguaya dinámica, especializada en la fabricación de prendas de cuero lanar. Desde hace mas de 30 años, nuestras prendas son exportadas a países tales como Estados Unidos, Canadá, Alemania, Reino Unido, entre otros.",
+        about_p1: "Somos una empresa uruguaya dinámica, especializada en la fabricación de prendas de cuero lanar. Desde hace más de 45 años, nuestras prendas son exportadas a países tales como Estados Unidos, Canadá, Alemania, Reino Unido, entre otros.",
         about_p2: "Utilizamos y seleccionamos las mejores materias primas para producir nuestras prendas. Dichas prendas pasan por un estricto control de calidad durante todo el proceso de fabricación, obteniendo así la excelente calidad que distingue a nuestros productos a nivel mundial.",
-        about_p3: "Como otro rubro, exportamos todo tipo de cueros ovinos curtidos al cromo, en sus diferentes tipos y para los diferentes usos. Somos una empresa dinámica en estos términos, siempre abierta a cambios y sugerencias de nuestros clientes, estando así a la vanguardia en lo que a moda se refiere.",
-        about_p4: "Nuestro propósito es estrechar vínculos con nuestros clientes para así poder seguir satisfaciéndolos, como desde hace mas de 30 años.",
+        about_p3: "Como otro rubro, trabajamos con todo tipo de cueros ovinos curtidos al cromo, en sus diferentes tipos y para los más variados usos. Siempre abiertos a las tendencias y sugerencias de nuestros clientes, nos mantenemos a la vanguardia en moda y diseño.",
+        about_p4: "Nuestro propósito es estrechar vínculos con quienes confían en nosotros, construyendo relaciones duraderas basadas en la calidad y el compromiso.",
+
+        // Ubicación Estratégica
+        location_title: "Ubicación Estratégica",
+        location_p1: 'Nuestra sede en <strong>San Ramón 803, Montevideo</strong> se encuentra a pasos del <em>Puerto de Montevideo</em>, el principal punto de salida logística del país.',
+        location_p2: "Esta cercanía nos permite gestionar de manera ágil y eficiente las exportaciones hacia los mercados que confían en nuestros productos desde hace décadas.",
+        location_p3: 'Además, operamos bajo el régimen de <strong>"Puerto Libre"</strong> de Uruguay, lo que nos brinda ventajas competitivas en tiempos y costos de despacho, conectando nuestra producción artesanal con el mundo de forma directa.',
 
         // Contacto
         contact_badge: "SOPORTE AL CLIENTE",
@@ -229,10 +235,16 @@ const translations = {
         about_title: "Who We Are",
         about_subtitle: "Discover the passion and dedication behind every one of our sheepskin leather pieces.",
         about_empresa_title: "Our Company",
-        about_p1: "We are a dynamic Uruguayan company, specialized in the manufacture of sheepskin leather garments. For over 30 years, our garments have been exported to countries such as the United States, Canada, Germany, the United Kingdom, among others.",
-        about_p2: "We use and select the finest raw materials to produce our garments. These garments undergo strict quality control throughout the entire manufacturing process, thus achieving the excellent quality that distinguishes our products worldwide.",
-        about_p3: "As another line of business, we export all types of chrome-tanned sheep leather, in their different types and for different uses. We are a dynamic company in these terms, always open to changes and suggestions from our clients, thus staying at the forefront of fashion.",
-        about_p4: "Our purpose is to strengthen bonds with our clients so we can continue to satisfy them, as we have for over 30 years.",
+        about_p1: "We are a dynamic Uruguayan company, specialized in the manufacture of sheepskin leather garments. For over 45 years, our garments have been exported to countries such as the United States, Canada, Germany, the United Kingdom, among others.",
+        about_p2: "We rigorously select the finest raw materials and every garment undergoes strict quality control throughout the entire manufacturing process, achieving the excellence that distinguishes us worldwide.",
+        about_p3: "As another line of business, we work with all types of chrome-tanned sheep leather, in their different varieties and for the most diverse uses. Always open to trends and client suggestions, we stay at the forefront of fashion and design.",
+        about_p4: "Our purpose is to build lasting bonds with those who trust us, forging enduring relationships grounded in quality and commitment.",
+
+        // Strategic Location
+        location_title: "Strategic Location",
+        location_p1: 'Our headquarters at <strong>San Ramón 803, Montevideo</strong> is located steps away from the <em>Port of Montevideo</em>, the country\'s main logistics hub.',
+        location_p2: "This proximity allows us to manage exports efficiently and swiftly to the markets that have trusted our products for decades.",
+        location_p3: 'Additionally, we operate under Uruguay\'s <strong>"Free Port"</strong> regime, giving us competitive advantages in shipping times and costs, connecting our artisan production directly with the world.',
 
         // Contacto
         contact_badge: "CUSTOMER SUPPORT",

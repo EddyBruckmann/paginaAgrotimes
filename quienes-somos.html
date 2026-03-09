@@ -32,7 +32,7 @@
         }
 
         .about-content {
-            padding: 4rem 0 8rem;
+            padding: 3rem 0 4rem;
         }
 
         .about-grid {
@@ -74,6 +74,107 @@
         @media (max-width: 768px) {
             .about-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        /* Ubicación Estratégica Section */
+        .location-section {
+            padding: 4rem 0 4rem;
+            background-color: var(--bg-color);
+            border-top: 1px solid rgba(44, 34, 28, 0.08);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .location-text h2 {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            font-weight: 900;
+            color: var(--primary-color);
+        }
+
+        .location-text p {
+            color: rgba(44, 34, 28, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .location-text p strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .location-text p em {
+            font-style: italic;
+            color: rgba(44, 34, 28, 0.7);
+        }
+
+        .location-address-card {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            border-left: 3px solid var(--primary-color);
+            background: rgba(142, 74, 35, 0.04);
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .location-address-card h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-address-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .location-map {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 2px solid rgba(44, 34, 28, 0.4);
+        }
+
+        .location-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .location-map-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.75rem 1.25rem;
+            background: linear-gradient(to top, rgba(42, 32, 26, 0.75), transparent);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-map {
+                order: -1;
             }
         }
     </style>
@@ -160,21 +261,42 @@
             </div>
             <div class="about-text">
                 <h2 data-i18n="about_empresa_title">Nuestra Empresa</h2>
-                <p data-i18n="about_p1">Somos una empresa Uruguaya dinámica, especializada en la fabricación de prendas
-                    de cuero lanar. Desde
-                    hace mas de 45 años, nuestras prendas son exportadas a países tales como Estados Unidos, Canadá,
-                    Alemania, Reino Unido, entre otros.</p>
+                <p data-i18n="about_p1">Somos una empresa uruguaya dinámica, especializada en la fabricación de prendas
+                    de cuero lanar. Desde hace más de 45 años, nuestras prendas son exportadas a países tales como
+                    Estados Unidos, Canadá, Alemania, Reino Unido, entre otros.</p>
                 <p data-i18n="about_p2">Utilizamos y seleccionamos las mejores materias primas para producir nuestras
-                    prendas. Dichas prendas
-                    pasan por un estricto control de calidad durante todo el proceso de fabricación, obteniendo así la
-                    excelente calidad que distingue a nuestros productos a nivel mundial.</p>
-                <p data-i18n="about_p3">Como otro rubro, exportamos todo tipo de cueros ovinos curtidos al cromo, en sus
-                    diferentes tipos y
-                    para los diferentes usos. Somos una empresa dinámica en estos términos, siempre abierta a cambios y
-                    sugerencias de nuestros clientes, estando así a la vanguardia en lo que a moda se refiere.</p>
-                <p data-i18n="about_p4">Nuestro propósito es estrechar vínculos con nuestros clientes para así poder
-                    seguir satisfaciéndolos,
-                    como desde hace mas de 30 años.</p>
+                    prendas. Dichas prendas pasan por un estricto control de calidad durante todo el proceso de
+                    fabricación,
+                    obteniendo así la excelente calidad que distingue a nuestros productos a nivel mundial.</p>
+                <p data-i18n="about_p3">Como otro rubro, trabajamos con todo tipo de cueros ovinos curtidos al cromo, en
+                    sus diferentes tipos y para los más variados usos. Siempre abiertos a las tendencias y sugerencias
+                    de nuestros clientes, nos mantenemos a la vanguardia en moda y diseño.</p>
+                <p data-i18n="about_p4">Nuestro propósito es estrechar vínculos con quienes confían en nosotros,
+                    construyendo relaciones duraderas basadas en la calidad y el compromiso.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación Estratégica -->
+    <section class="location-section">
+        <div class="container location-grid">
+            <div class="location-text">
+                <h2 data-i18n="location_title">Ubicación Estratégica</h2>
+                <p data-i18n="location_p1" data-i18n-html>Nuestra sede en <strong>San Ramón 803, Montevideo</strong> se
+                    encuentra a pasos del <em>Puerto de
+                        Montevideo</em>, el principal punto de salida logística del país.</p>
+                <p data-i18n="location_p2">Esta cercanía nos permite gestionar de manera ágil y eficiente las
+                    exportaciones hacia los mercados
+                    que confían en nuestros productos desde hace décadas.</p>
+                <p data-i18n="location_p3" data-i18n-html>Además, operamos bajo el régimen de <strong>"Puerto
+                        Libre"</strong> de Uruguay, lo que nos brinda
+                    ventajas competitivas en tiempos y costos de despacho, conectando nuestra producción artesanal con
+                    el mundo de forma directa.</p>
+
+
+            </div>
+            <div class="location-map">
+                <img src="assets/images/mapa.png" alt="Mapa de ubicación de Agrotimes S.A. en Montevideo">
             </div>
         </div>
     </section>
