@@ -131,7 +131,7 @@ const productData = {
         title: 'AT-11',
         category: 'Prendas',
         description: 'Un modelo técnico de alta performance térmica. El AT-11 utiliza los cueros más densos de nuestra producción para asegurar confort en cualquier condición.',
-        images: ['assets/images/fotosNuevas/product-prendas.jpg', 'assets/images/fotosNuevas/product-prendas.jpg']
+        images: ['assets/images/fotos reales/at11.png', 'assets/images/fotos reales/at11-2.png']
     },
     'anne': {
         title: 'Anne',
@@ -149,7 +149,7 @@ const productData = {
         title: 'Silvana',
         category: 'Prendas',
         description: 'Estilo contemporáneo con base tradicional. Silvana ofrece un corte moderno en cuero lanar, manteniendo los estándares de calidad de exportación.',
-        images: ['assets/images/fotosNuevas/product-prendas.jpg', 'assets/images/fotosNuevas/product-prendas.jpg']
+        images: ['assets/images/fotos reales/silvana.png', 'assets/images/fotos reales/silvana2.png']
     },
     'gorro-6p': {
         title: 'Gorro 6P',
