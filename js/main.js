@@ -77,7 +77,7 @@ const productData = {
         title: 'Dominico',
         category: 'Prendas',
         description: 'El equilibrio perfecto entre robustez y estilo. El modelo Dominico está diseñado para durar décadas, fabricado con cueros seleccionados bajo estrictos estándares de calidad.',
-        images: ['assets/images/fotos reales/dominico.png', 'assets/images/fotos reales/dominico.png']
+        images: ['assets/images/fotos reales/dominico.png', 'assets/images/fotos reales/dominico2.png']
     },
     'rufus': {
         title: 'Rufus',
