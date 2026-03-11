@@ -398,4 +398,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // cueros-gallery interactive swap: requires alternate images named cueros-1.png, cueros-2.png, etc.
+    const galleryImg = document.querySelector('.cueros-gallery .gallery-image-wrapper img');
+    const toneAreas = document.querySelectorAll('.cueros-gallery .tone');
+    if (galleryImg && toneAreas.length) {
+        const defaultSrc = galleryImg.getAttribute('src');
+        toneAreas.forEach(tone => {
+            tone.addEventListener('mouseenter', () => {
+                const alt = tone.dataset.image;
+                if (alt) galleryImg.src = alt;
+            });
+            tone.addEventListener('mouseleave', () => {
+                galleryImg.src = defaultSrc;
+            });
+        });
+    }
 });

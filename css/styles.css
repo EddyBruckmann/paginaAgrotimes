@@ -492,6 +492,72 @@ nav.container {
     transition: transform 0.5s ease;
 }
 
+/* Gallery section used in cueros.html for full‑width variants image */
+.cueros-gallery {
+    margin: 4rem 0;
+    text-align: center;
+}
+.cueros-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+.cueros-gallery .gallery-image-wrapper {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+}
+.cueros-gallery img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(44, 34, 28, 0.05);
+}
+
+/* tonalidad overlay */
+.cueros-gallery .gallery-image-wrapper {
+    position: relative;
+}
+.cueros-gallery .tone-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* allow image clicks if needed */
+}
+.cueros-gallery .tone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(100%/11);
+    cursor: pointer;
+    pointer-events: auto; /* enable hover */
+}
+.cueros-gallery .tone:hover {
+    /* removed overlay color per user request */
+    background: transparent;
+}
+.cueros-gallery .tone::after {
+    content: attr(data-name);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0.25rem);
+    background: var(--text-color);
+    color: var(--white);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    border-radius: 0.25rem;
+}
+.cueros-gallery .tone:hover::after {
+    opacity: 1;
+}
+
 .floating-quote {
     position: absolute;
     bottom: -1.5rem;
