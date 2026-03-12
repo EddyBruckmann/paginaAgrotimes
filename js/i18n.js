@@ -129,6 +129,10 @@ const translations = {
         // Cueros page
         cueros_title: "Cueros Curtidos",
         cueros_desc: "Alta calidad para la industria peletera.",
+        cueros_taller_title: "Our Workshop",
+        cueros_taller_desc: "In our artisan workshop we select each hide and combine traditional techniques with modern quality controls.",
+        cueros_taller_title: "Nuestro Taller",
+        cueros_taller_desc: "En nuestro taller artesanal seleccionamos cada cuero y aplicamos técnicas tradicionales combinadas con controles modernos de calidad.",
         cuero_vintage_antik: "Vintage Antik Salmon Wool",
         cuero_pecari_sf: "Pecari San Francisco",
         cuero_pecari_nugat: "Pecari Nugat Tone Tone",

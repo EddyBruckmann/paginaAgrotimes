@@ -399,19 +399,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // cueros-gallery interactive swap: requires alternate images named cueros-1.png, cueros-2.png, etc.
-    const galleryImg = document.querySelector('.cueros-gallery .gallery-image-wrapper img');
-    const toneAreas = document.querySelectorAll('.cueros-gallery .tone');
-    if (galleryImg && toneAreas.length) {
-        const defaultSrc = galleryImg.getAttribute('src');
-        toneAreas.forEach(tone => {
-            tone.addEventListener('mouseenter', () => {
-                const alt = tone.dataset.image;
-                if (alt) galleryImg.src = alt;
-            });
-            tone.addEventListener('mouseleave', () => {
-                galleryImg.src = defaultSrc;
-            });
-        });
-    }
+    // initialize tone buttons on cueros page if present
+    initToneButtons();
 });
+
+/**
+ * Adds the row of coloured dots and links them to the main gallery image.
+ * Also hooks the overlay zones so both interactions behave the same way.
+ */
+function initToneButtons() {
+    const galleryWrapper = document.querySelector('.cueros-gallery .gallery-image-wrapper');
+    if (!galleryWrapper) return;
+    const mainImg = galleryWrapper.querySelector('img');
+    const defaultSrc = mainImg ? mainImg.src : '';
+    const currentToneEl = document.getElementById('current-tone');
+
+    // hover behaviour for the static buttons
+    document.querySelectorAll('.cueros-gallery .tone-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            const img = btn.getAttribute('data-image');
+            const name = btn.getAttribute('data-name');
+            if (mainImg && img) mainImg.src = img;
+            if (currentToneEl) currentToneEl.textContent = name;
+            btn.classList.add('active');
+        });
+        btn.addEventListener('mouseleave', () => {
+            if (mainImg && defaultSrc) mainImg.src = defaultSrc;
+            if (currentToneEl) currentToneEl.textContent = '';
+            btn.classList.remove('active');
+        });
+    });
+
+    // mirror the same behaviour for the transparent overlay zones
+    document.querySelectorAll('.cueros-gallery .tone').forEach(tone => {
+        tone.addEventListener('mouseenter', () => {
+            const img = tone.getAttribute('data-image');
+            const name = tone.getAttribute('data-name');
+            if (mainImg && img) mainImg.src = img;
+            if (currentToneEl) currentToneEl.textContent = name;
+        });
+        tone.addEventListener('mouseleave', () => {
+            if (mainImg && defaultSrc) mainImg.src = defaultSrc;
+            if (currentToneEl) currentToneEl.textContent = '';
+        });
+    });
+}
+
+

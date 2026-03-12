@@ -77,191 +77,56 @@
 
         <!-- Sección de variantes: foto completa de cueros -->
         <section class="cueros-gallery container">
+            <!-- area to show the current tone on hover -->
+            <div id="current-tone" class="current-tone"></div>
             <div class="gallery-image-wrapper">
                 <img src="assets/images/cueros.png" alt="Variantes de cueros">
                 <!-- overlays for tonalidad hover tooltips; edit data-name values as needed -->
                 <div class="tone-overlay">
-                    <div class="tone" data-name="Tono 1" data-image="assets/images/cueros1.png" style="left:0%;"></div>
-                    <div class="tone" data-name="Tono 2" data-image="assets/images/cueros2.png" style="left:9.09%;">
-                    </div>
-                    <div class="tone" data-name="Tono 3" data-image="assets/images/cueros3.png" style="left:18.18%;">
-                    </div>
-                    <div class="tone" data-name="Tono 4" data-image="assets/images/cueros4.png" style="left:27.27%;">
-                    </div>
-                    <div class="tone" data-name="Tono 5" data-image="assets/images/cueros4.png" style="left:36.36%;">
-                    </div>
-                    <div class="tone" data-name="Tono 6" data-image="assets/images/cueros4.png" style="left:45.45%;">
-                    </div>
-                    <div class="tone" data-name="Tono 7" data-image="assets/images/cueros4.png" style="left:54.54%;">
-                    </div>
-                    <div class="tone" data-name="Tono 8" data-image="assets/images/cueros4.png" style="left:63.63%;">
-                    </div>
-                    <div class="tone" data-name="Tono 9" data-image="assets/images/cueros4.png" style="left:72.72%;">
-                    </div>
-                    <div class="tone" data-name="Tono 10" data-image="assets/images/cueros4.png" style="left:81.81%;">
-                    </div>
-                    <div class="tone" data-name="Tono 11" data-image="assets/images/cueros4.png" style="left:90.90%;">
-                    </div>
+                    <div class="tone" data-name="Blanco Natural" data-image="assets/images/cueros1.png" style="left:0%;"></div>
+                    <div class="tone" data-name="Crudo" data-image="assets/images/cueros2.png" style="left:9.09%;"></div>
+                    <div class="tone" data-name="Beige Claro" data-image="assets/images/cueros3.png" style="left:18.18%;"></div>
+                    <div class="tone" data-name="Arena" data-image="assets/images/cueros4.png" style="left:27.27%;"></div>
+                    <div class="tone" data-name="Camel" data-image="assets/images/cueros4.png" style="left:36.36%;"></div>
+                    <div class="tone" data-name="Cognac" data-image="assets/images/cueros4.png" style="left:45.45%;"></div>
+                    <div class="tone" data-name="Marrón Medio" data-image="assets/images/cueros4.png" style="left:54.54%;"></div>
+                    <div class="tone" data-name="Chocolate" data-image="assets/images/cueros4.png" style="left:63.63%;"></div>
+                    <div class="tone" data-name="Marrón Oscuro" data-image="assets/images/cueros4.png" style="left:72.72%;"></div>
+                    <div class="tone" data-name="Borravino" data-image="assets/images/cueros4.png" style="left:81.81%;"></div>
+                    <div class="tone" data-name="Negro" data-image="assets/images/cueros4.png" style="left:90.90%;"></div>
                 </div>
+            </div>
+            <!-- row of colour buttons that mirror the overlay tones -->
+            <div class="tone-buttons">
+                <div class="tone-btn" data-name="Blanco Natural" data-image="assets/images/cueros1.png" style="background:#f3ece5;"></div>
+                <div class="tone-btn" data-name="Crudo" data-image="assets/images/cueros2.png" style="background:#eadbc8;"></div>
+                <div class="tone-btn" data-name="Beige Claro" data-image="assets/images/cueros3.png" style="background:#d8c4a4;"></div>
+                <div class="tone-btn" data-name="Arena" data-image="assets/images/cueros4.png" style="background:#c7ae86;"></div>
+                <div class="tone-btn" data-name="Camel" data-image="assets/images/cueros4.png" style="background:#b38a5d;"></div>
+                <div class="tone-btn" data-name="Cognac" data-image="assets/images/cueros4.png" style="background:#9c6a3c;"></div>
+                <div class="tone-btn" data-name="Marrón Medio" data-image="assets/images/cueros4.png" style="background:#84542e;"></div>
+                <div class="tone-btn" data-name="Chocolate" data-image="assets/images/cueros4.png" style="background:#5d3a1f;"></div>
+                <div class="tone-btn" data-name="Marrón Oscuro" data-image="assets/images/cueros4.png" style="background:#432c1a;"></div>
+                <div class="tone-btn" data-name="Borravino" data-image="assets/images/cueros4.png" style="background:#5c1e1e;"></div>
+                <div class="tone-btn" data-name="Negro" data-image="assets/images/cueros4.png" style="background:#1a1a1a;"></div>
             </div>
         </section>
-
-        <!-- <div class="products-grid-catalog" id="products-grid">
-           
-             <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Vintage Antik Salmon Wool">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_vintage_antik">Vintage Antik Salmon Wool</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Pecari San Francisco">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_pecari_sf">Pecari San Francisco</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Pecari Nugat Tone Tone">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_pecari_nugat">Pecari Nugat Tone Tone</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Pecari Camel Tone Tone">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_pecari_camel">Pecari Camel Tone Tone</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Pecari Nugat Tone to Tone">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_pecari_nugat2">Pecari Nugat Tone to Tone</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Old Navy Cafe Lana Salmon">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_old_navy">Old Navy Cafe Lana Salmon</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Negro Brisa Bota">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_negro_brisa">Negro Brisa Bota</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Napalan Sky Blue Curly Natural Wool">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_sky">Napalan Sky Blue Curly Natural Wool</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Napalan Old Navy Cafe Salmon Wool">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_navy">Napalan Old Navy Cafe Salmon Wool</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg" alt="Napalan Jade">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_jade">Napalan Jade</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Napalan Black Tone">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_black">Napalan Black Tone</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Napalan Antik Natural Wool">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_antik">Napalan Antik Natural Wool</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Marrón Brisa Bota">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_marron_brisa">Marrón Brisa Bota</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Habano Tone to Tone">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_habano">Habano Tone to Tone</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Ginseng Tone to Tone Boots">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_ginseng">Ginseng Tone to Tone Boots</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg"
-                        alt="Napalan Antik Havanna Wool">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_napalan_havanna">Napalan Antik Havanna Wool</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image"><img src="assets/images/fotosNuevas/product-cueros.jpg" alt="Alpino Natural">
-                </div>
-                <div class="product-info">
-                    <h3 data-i18n="cuero_alpino">Alpino Natural</h3>
-                    <div class="product-price" data-i18n="prod_consultar">Consultar Precio</div>
-                </div>
-            </div>
-        </div> -->
-
     </div>
+
+    <!-- sección del taller (foto + texto) full-width -->
+    <section class="workshop-section">
+        <div class="container">
+            <div class="workshop-grid">
+                <div class="workshop-content">
+                    <h2 data-i18n="cueros_taller_title">Nuestro Taller</h2>
+                    <p data-i18n="cueros_taller_desc">En nuestro taller artesanal seleccionamos cada cuero y aplicamos técnicas tradicionales combinadas con controles modernos de calidad. El resultado son piezas duraderas y con carácter, listas para el mercado internacional.</p>
+                </div>
+                <div class="workshop-image-wrapper">
+                    <img src="assets/images/contact-bg.jpg" alt="Foto del taller">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
