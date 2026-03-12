@@ -7,7 +7,7 @@ const translations = {
     es: {
         // Navigation
         nav_inicio: "Inicio",
-        nav_quienes: "¿Quiénes Somos?",
+        nav_quienes: "Nuesta Empresa",
         nav_productos: "Productos",
         nav_contacto: "Contacto",
         nav_explorar: "Explorar",
@@ -33,7 +33,7 @@ const translations = {
         cat_title: "Categorías Premium",
         cat_desc: "Selección curada de nuestros productos estrella, procesados con los estándares más altos de la industria peletera.",
         cat_link: "Ver todo el catálogo →",
-        cat_cueros: "Cueros Curtidos",
+        cat_cueros: "Tonalidades",
         cat_prendas: "Prendas",
         cat_mitones: "Mitones",
         cat_gorros: "Gorros",
