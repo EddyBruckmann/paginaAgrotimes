@@ -494,22 +494,25 @@ nav.container {
 
 /* Gallery section used in cueros.html for full‑width variants image */
 .cueros-gallery {
-    margin: 2rem 0;
+    margin: 0 0 4rem;
     text-align: center;
     position: relative;
     --current-tone-h: 2.5rem;
 }
+
 .cueros-gallery h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
 }
+
 .cueros-gallery .gallery-image-wrapper {
     display: inline-block;
     width: 100%;
-    max-width: 800px;
+    max-width: 1280px;
     margin-top: var(--current-tone-h);
 }
+
 .cueros-gallery img {
     width: 100%;
     border-radius: 1rem;
@@ -521,26 +524,31 @@ nav.container {
 .cueros-gallery .gallery-image-wrapper {
     position: relative;
 }
+
 .cueros-gallery .tone-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    pointer-events: none; /* allow image clicks if needed */
+    pointer-events: none;
+    /* allow image clicks if needed */
 }
+
 .cueros-gallery .tone {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: calc(100%/11);
     cursor: pointer;
-    pointer-events: auto; /* enable hover */
+    pointer-events: auto;
+    /* enable hover */
 }
+
 .cueros-gallery .tone:hover {
     /* removed overlay color per user request */
     background: transparent;
 }
+
 .cueros-gallery .tone::after {
     content: attr(data-name);
     position: absolute;
@@ -557,6 +565,7 @@ nav.container {
     pointer-events: none;
     border-radius: 0.25rem;
 }
+
 .cueros-gallery .tone:hover::after {
     opacity: 1;
 }
@@ -569,6 +578,7 @@ nav.container {
     gap: 1rem;
     margin-top: 1.5rem;
 }
+
 .cueros-gallery .tone-btn {
     width: 2rem;
     height: 2rem;
@@ -578,11 +588,13 @@ nav.container {
     transition: var(--transition);
     border: 2px solid transparent;
 }
+
 .cueros-gallery .tone-btn:hover,
 .cueros-gallery .tone-btn.active {
     border-color: var(--primary-color);
     transform: scale(1.1);
 }
+
 .cueros-gallery .tone-btn::after {
     content: attr(data-name);
     position: absolute;
@@ -597,6 +609,7 @@ nav.container {
     white-space: nowrap;
     transition: opacity 0.2s;
 }
+
 .cueros-gallery .tone-btn:hover::after {
     opacity: 1;
 }
@@ -618,11 +631,22 @@ nav.container {
     color: var(--primary-color);
 }
 
+.page-header-cueros {
+    text-align: center;
+}
+
+.page-header-cueros h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
 /* taller workshop section - full width */
 .workshop-section {
-    padding: 6rem 0;
-    background-color: #f5ede5;
-    margin-top: 4rem;
+    padding: 2rem 0 2rem 0;
+    background-color: var(--bg-color);
+    margin-top: 2rem;
 }
 
 .workshop-grid {
@@ -660,11 +684,79 @@ nav.container {
     object-fit: cover;
 }
 
+/* Workshop card specific styles to match prototype */
+.processes-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 0.78rem;
+    margin-bottom: 0.75rem;
+}
+
+.workshop-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin: 0 0 1rem 0;
+    line-height: 1.05;
+    color: var(--text-color);
+}
+
+.workshop-lead {
+    color: rgba(44, 34, 28, 0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.process-list {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.process-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.process-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(142, 74, 35, 0.06);
+    color: var(--primary-color);
+    border: 1px solid rgba(142, 74, 35, 0.08);
+}
+
+.process-title {
+    font-weight: 800;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.process-desc {
+    color: var(--gray-text);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 880px) {
+    .process-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
 @media(max-width: 768px) {
     .workshop-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .workshop-section {
         padding: 4rem 0;
     }
@@ -1382,5 +1474,120 @@ footer {
 
     .modal-overlay {
         padding: 1rem;
+    }
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 2rem 0 2rem 0;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(142, 74, 35, 0.2);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item.left {
+    flex-direction: row;
+}
+
+.timeline-item.right {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 0 2rem;
+}
+
+.timeline-item.left .timeline-content {
+    text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+    text-align: left;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 8px var(--bg-color), 0 4px 10px rgba(142, 74, 35, 0.2);
+    z-index: 2;
+}
+
+.timeline-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 24px;
+        transform: none;
+    }
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-icon {
+        left: 24px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        padding-left: 1.5rem;
+        padding-right: 0;
+        text-align: left !important;
     }
 }

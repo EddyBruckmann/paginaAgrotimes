@@ -13,9 +13,9 @@ const translations = {
         nav_explorar: "Explorar",
 
         // Hero
-        hero_badge: "TRADICIÓN URUGUAYA DESDE 1978",
+        hero_badge: "TRADICIÓN URUGUAYA DESDE 1994",
         hero_title: 'Fabricantes y exportadores de<br> <span style="color: var(--primary-color); font-style: italic;">cuero lanar</span>',
-        hero_desc: "Especialistas en la exportación global de cueros curtidos con lana de la más alta calidad premium, procesados con maestría artesanal.",
+        hero_desc: "Especialistas en la exportación global de cueros curtidos con lana de la más alta calidad premium, procesados artesanalmente.",
         hero_btn_explorar: "Explorar Productos",
         hero_btn_catalogo: "Ver Catálogo",
 
@@ -127,7 +127,7 @@ const translations = {
         contact_enviar: "Enviar Mensaje",
 
         // Cueros page
-        cueros_title: "Cueros Curtidos",
+        cueros_title: "Nuestras tonalidades",
         cueros_desc: "Alta calidad para la industria peletera.",
         cueros_taller_title: "Our Workshop",
         cueros_taller_desc: "In our artisan workshop we select each hide and combine traditional techniques with modern quality controls.",
@@ -160,7 +160,7 @@ const translations = {
         nav_explorar: "Explore",
 
         // Hero
-        hero_badge: "URUGUAYAN TRADITION SINCE 1978",
+        hero_badge: "URUGUAYAN TRADITION SINCE 1994",
         hero_title: 'Manufacturers and exporters of<br> <span style="color: var(--primary-color); font-style: italic;">sheepskin leather</span>',
         hero_desc: "Specialists in the global export of premium quality wool-on tanned leathers, processed with artisan craftsmanship.",
         hero_btn_explorar: "Explore Products",

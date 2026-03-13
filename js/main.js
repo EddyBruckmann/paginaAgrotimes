@@ -408,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * Also hooks the overlay zones so both interactions behave the same way.
  */
 function initToneButtons() {
+    return; // temporarily disabled per user request
     const galleryWrapper = document.querySelector('.cueros-gallery .gallery-image-wrapper');
     if (!galleryWrapper) return;
     const mainImg = galleryWrapper.querySelector('img');
