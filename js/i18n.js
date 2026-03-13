@@ -17,7 +17,7 @@ const translations = {
         hero_title: 'Fabricantes y exportadores de<br> <span style="color: var(--primary-color); font-style: italic;">cuero lanar</span>',
         hero_desc: "Especialistas en la exportación global de cueros curtidos con lana de la más alta calidad premium, procesados artesanalmente.",
         hero_btn_explorar: "Explorar Productos",
-        hero_btn_catalogo: "Ver Catálogo",
+        hero_btn_catalogo: "Proceso de curtido",
 
         // Heritage
         heritage_badge: "HERENCIA FAMILIAR",
