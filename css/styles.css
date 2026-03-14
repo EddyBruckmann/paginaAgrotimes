@@ -414,7 +414,7 @@ nav.container {
 
 /* Herencia Familiar Section */
 .heritage-section {
-    padding: 8rem 0;
+    padding: 6rem 0 4rem;
     background-color: var(--bg-color);
 }
 
@@ -785,8 +785,8 @@ nav.container {
 
 /* Nuestro Proceso Section (Landing Preview) - Aligned with Heritage */
 .process-preview-section {
-    padding: srem 0;
-    background-color: var(--white);
+    padding: 3rem 0;
+    background-color: var(--bg-color);
 }
 
 .process-preview-grid {
