@@ -10,6 +10,8 @@ const translations = {
         nav_quienes: "Nuesta Empresa",
         nav_productos: "Productos",
         nav_contacto: "Contacto",
+        nav_proceso: "Nuestro Proceso",
+        btn_ver_mas: "Ver más",
         nav_explorar: "Explorar",
 
         // Hero
@@ -150,6 +152,34 @@ const translations = {
         cuero_ginseng: "Ginseng Tone to Tone Boots",
         cuero_napalan_havanna: "Napalan Antik Havanna Wool",
         cuero_alpino: "Alpino Natural",
+
+        // Zero Waste page
+        nav_zero_waste: "Zero Waste",
+        zw_hero_title: 'Materia Prima.<br> <span style="color: var(--primary-color); font-style: italic;">Selección de Taller.</span>',
+        zw_hero_desc: "Recortes de cuero lanar con lana de primera calidad, disponibles por lote y agrupados por paleta de color. Ideal para fabricantes, artesanos y proyectos a escala.",
+        zw_hero_btn_lotes: "Ver Lotes Disponibles",
+        zw_hero_btn_cotizacion: "Solicitar Cotización",
+        zw_feat1_title: "Producción Responsable",
+        zw_feat1_desc: "Aprovechamiento integral de cada pieza. Cero desperdicio en nuestra cadena productiva.",
+        zw_feat2_title: "Lotes a Medida",
+        zw_feat2_desc: "Armamos lotes según tus necesidades de color, tamaño y volumen. Sin mínimos rígidos.",
+        zw_feat3_title: "Cuero Lanar con Lana",
+        zw_feat3_desc: "Mismo origen y calidad que nuestras prendas. Curtido profesional, lana natural intacta.",
+        zw_lots_title: "Lotes Disponibles",
+        zw_lots_desc: "Cuero lanar con lana, agrupado por paleta de color. Consultá por volumen y disponibilidad.",
+        zw_lot1_title: "Tonos Tierra",
+        zw_lot1_desc: "Marrones, cognac, suela y óxido. Cuero lanar con lana natural en distintas tonalidades cálidas.",
+        zw_lot1_tags: "Marrón oscuro, Cognac, Suela, Óxido",
+        zw_lot1_badge: "Lana corta y media",
+        zw_lot2_title: "Monocromo",
+        zw_lot2_desc: "Negros, grises y blancos. Cuero lanar ideal para líneas de producto uniformes.",
+        zw_lot2_tags: "Negro, Gris oscuro, Gris claro, Crudo",
+        zw_lot2_badge: "Lana media y larga",
+        zw_lot3_title: "Paleta Mixta",
+        zw_lot3_desc: "Variedad de colores y texturas. Para proyectos que requieren diversidad de materia prima.",
+        zw_lot3_tags: "Variado, Según disponibilidad",
+        zw_lot3_badge: "Lana mixta",
+        zw_consultar_disponibilidad: "Consultar disponibilidad →",
     },
     en: {
         // Navigation
@@ -157,6 +187,8 @@ const translations = {
         nav_quienes: "About Us",
         nav_productos: "Products",
         nav_contacto: "Contact",
+        nav_proceso: "Our Process",
+        btn_ver_mas: "See more",
         nav_explorar: "Explore",
 
         // Hero
@@ -293,6 +325,34 @@ const translations = {
         cuero_ginseng: "Ginseng Tone to Tone Boots",
         cuero_napalan_havanna: "Napalan Antik Havanna Wool",
         cuero_alpino: "Alpino Natural",
+
+        // Zero Waste page
+        nav_zero_waste: "Zero Waste",
+        zw_hero_title: 'Raw Material.<br> <span style="color: var(--primary-color); font-style: italic;">Workshop Selection.</span>',
+        zw_hero_desc: "Premium wool-on sheepskin leather scraps, available by lot and grouped by color palette. Ideal for manufacturers, artisans, and scale projects.",
+        zw_hero_btn_lotes: "View Available Lots",
+        zw_hero_btn_cotizacion: "Request Quote",
+        zw_feat1_title: "Responsible Production",
+        zw_feat1_desc: "Comprehensive use of every piece. Zero waste in our production chain.",
+        zw_feat2_title: "Custom Lots",
+        zw_feat2_desc: "We assemble lots according to your color, size, and volume needs. No rigid minimums.",
+        zw_feat3_title: "Sheepskin with Wool",
+        zw_feat3_desc: "Same origin and quality as our garments. Professional tanning, natural wool intact.",
+        zw_lots_title: "Available Lots",
+        zw_lots_desc: "Wool-on sheepskin, grouped by color palette. Inquire for volume and availability.",
+        zw_lot1_title: "Earth Tones",
+        zw_lot1_desc: "Browns, cognac, tan, and rust. Wool-on sheepskin in various warm tones.",
+        zw_lot1_tags: "Dark brown, Cognac, Tan, Rust",
+        zw_lot1_badge: "Short and medium wool",
+        zw_lot2_title: "Monochrome",
+        zw_lot2_desc: "Blacks, greys, and whites. Ideal sheepskin for uniform product lines.",
+        zw_lot2_tags: "Black, Dark grey, Light grey, Raw",
+        zw_lot2_badge: "Medium and long wool",
+        zw_lot3_title: "Mixed Palette",
+        zw_lot3_desc: "Variety of colors and textures. For projects requiring raw material diversity.",
+        zw_lot3_tags: "Varied, Subject to availability",
+        zw_lot3_badge: "Mixed wool",
+        zw_consultar_disponibilidad: "Check availability →",
     }
 };
 

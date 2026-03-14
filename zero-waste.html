@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logoVec.png" type="image/png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/images/logoVecInvertido.png" type="image/png" media="(prefers-color-scheme: dark)">
+    <title data-i18n="nav_zero_waste">Zero Waste | Agrotimes S.A.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Specific styles for Zero Waste page */
+        .zw-hero {
+            padding: 4rem 0;
+            display: flex;
+            align-items: center;
+            min-height: 70vh;
+            background-color: var(--bg-color);
+        }
+
+        .zw-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .zw-hero-content {
+            max-width: 600px;
+        }
+
+        .zw-hero-badge {
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .zw-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .zw-hero p {
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .zw-hero-image-wrapper {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 4/3;
+        }
+
+        .zw-hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Features Section */
+        .zw-features {
+            padding: 6rem 0;
+            background-color: var(--white);
+        }
+
+        .zw-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .zw-feature-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .zw-feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .zw-feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .zw-feature-card p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Lots Section */
+        .zw-lots {
+            padding: 8rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .zw-section-header {
+            margin-bottom: 4rem;
+        }
+
+        .zw-section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .zw-lots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .zw-lot-card {
+            background: var(--white);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zw-lot-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .zw-lot-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .zw-lot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .zw-lot-badge {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .zw-lot-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zw-lot-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .zw-lot-content p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .zw-lot-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .zw-lot-tag {
+            background-color: var(--bg-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--gray-text);
+        }
+
+        .zw-lot-link {
+            margin-top: auto;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .zw-hero-grid, .zw-features-grid, .zw-lots-grid {
+                grid-template-columns: 1fr;
+            }
+            .zw-hero-grid {
+                text-align: center;
+            }
+            .zw-hero-content {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <a href="index.html" style="display: flex; align-items: center; gap: 0.8rem;">
+                    <img src="assets/images/logo.png" alt="Agrotimes Icon" class="logo-img">
+                    <div class="logo-text">AGROTIMES <span>S.A.</span></div>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-i18n="nav_quienes">Nuestra Empresa</a></li>
+                <li><a href="cueros.html" data-i18n="nav_proceso">Nuestro Proceso</a></li>
+                <li><a href="productos.html" data-i18n="nav_productos">Productos</a></li>
+                <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="lang-switch" class="lang-btn" onclick="toggleLanguage()" title="Switch to English">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    <span>EN</span>
+                </button>
+                <a href="productos.html" class="btn btn-primary" data-i18n="nav_explorar">Explorar</a>
+                <button id="menu-toggle" class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-i18n="nav_quienes">¿Quiénes Somos?</a></li>
+                <li><a href="cueros.html" data-i18n="nav_proceso">Nuestro Proceso</a></li>
+                <li><a href="productos.html" data-i18n="nav_productos">Productos</a></li>
+                <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+            </ul>
+            <div class="mobile-nav-actions">
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    <span>EN</span>
+                </button>
+                <a href="productos.html" class="btn btn-primary" data-i18n="nav_explorar">Explorar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="zw-hero">
+        <div class="container zw-hero-grid">
+            <div class="zw-hero-content">
+                <div class="zw-hero-badge">PRODUCCIÓN RESPONSABLE · ZERO WASTE</div>
+                <h1 data-i18n="zw_hero_title" data-i18n-html>Materia Prima.<br> Selección de Taller.</h1>
+                <p data-i18n="zw_hero_desc">Recortes de cuero lanar con lana de primera calidad, disponibles por lote y agrupados por paleta de color. Ideal para fabricantes, artesanos y proyectos a escala.</p>
+                <div class="hero-buttons">
+                    <a href="#lotes" class="btn btn-primary" data-i18n="zw_hero_btn_lotes">Ver Lotes Disponibles</a>
+                    <a href="contacto.html" class="btn btn-outline" data-i18n="zw_hero_btn_cotizacion">Solicitar Cotización</a>
+                </div>
+            </div>
+            <div class="zw-hero-image">
+                <div class="zw-hero-image-wrapper">
+                    <img src="assets/images/zero_waste_hero.png" alt="Recortes de Cuero premium">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="zw-features">
+        <div class="container zw-features-grid">
+            <!-- Feature 1 -->
+            <div class="zw-feature-card">
+                <div class="zw-feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 data-i18n="zw_feat1_title">Producción Responsable</h3>
+                    <p data-i18n="zw_feat1_desc">Aprovechamiento integral de cada pieza. Cero desperdicio en nuestra cadena productiva.</p>
+                </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="zw-feature-card">
+                <div class="zw-feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 data-i18n="zw_feat2_title">Lotes a Medida</h3>
+                    <p data-i18n="zw_feat2_desc">Armamos lotes según tus necesidades de color, tamaño y volumen. Sin mínimos rígidos.</p>
+                </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="zw-feature-card">
+                <div class="zw-feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+                        <line x1="16" y1="8" x2="2" y2="22"/>
+                        <line x1="17.5" y1="15" x2="9" y2="15"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 data-i18n="zw_feat3_title">Cuero Lanar con Lana</h3>
+                    <p data-i18n="zw_feat3_desc">Mismo origen y calidad que nuestras prendas. Curtido profesional, lana natural intacta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Lots Section -->
+    <section id="lotes" class="zw-lots">
+        <div class="container">
+            <div class="zw-section-header">
+                <h2 data-i18n="zw_lots_title">Lotes Disponibles</h2>
+                <p data-i18n="zw_lots_desc">Cuero lanar con lana, agrupado por paleta de color. Consultá por volumen y disponibilidad.</p>
+            </div>
+
+            <div class="zw-lots-grid">
+                <!-- Lot 1: Tonos Tierra -->
+                <div class="zw-lot-card">
+                    <div class="zw-lot-image">
+                        <img src="assets/images/lote_tierra.png" alt="Lote Tonos Tierra">
+                        <span class="zw-lot-badge" data-i18n="zw_lot1_badge">Lana corta y media</span>
+                    </div>
+                    <div class="zw-lot-content">
+                        <h3 data-i18n="zw_lot1_title">Tonos Tierra</h3>
+                        <p data-i18n="zw_lot1_desc">Marrones, cognac, suela y óxido. Cuero lanar con lana natural en distintas tonalidades cálidas.</p>
+                        <div class="zw-lot-tags">
+                            <span class="zw-lot-tag">Marrón oscuro</span>
+                            <span class="zw-lot-tag">Cognac</span>
+                            <span class="zw-lot-tag">Suela</span>
+                            <span class="zw-lot-tag">Óxido</span>
+                        </div>
+                        <a href="contacto.html?asunto=Consulta%20Lote%20Tonos%20Tierra&mensaje=Hola,%20quisiera%20consultar%20por%20la%20disponibilidad%20del%20Lote%20de%20Recortes%20Tonos%20Tierra." class="zw-lot-link" data-i18n="zw_consultar_disponibilidad">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+
+                <!-- Lot 2: Monocromo -->
+                <div class="zw-lot-card">
+                    <div class="zw-lot-image">
+                        <img src="assets/images/lote_monocromo.png" alt="Lote Monocromo">
+                        <span class="zw-lot-badge" data-i18n="zw_lot2_badge">Lana media y larga</span>
+                    </div>
+                    <div class="zw-lot-content">
+                        <h3 data-i18n="zw_lot2_title">Monocromo</h3>
+                        <p data-i18n="zw_lot2_desc">Negros, grises y blancos. Cuero lanar ideal para líneas de producto uniformes.</p>
+                        <div class="zw-lot-tags">
+                            <span class="zw-lot-tag">Negro</span>
+                            <span class="zw-lot-tag">Gris oscuro</span>
+                            <span class="zw-lot-tag">Gris claro</span>
+                            <span class="zw-lot-tag">Crudo</span>
+                        </div>
+                        <a href="contacto.html?asunto=Consulta%20Lote%20Monocromo&mensaje=Hola,%20quisiera%20consultar%20por%20la%20disponibilidad%20del%20Lote%20de%20Recortes%20Monocromo." class="zw-lot-link" data-i18n="zw_consultar_disponibilidad">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+
+                <!-- Lot 3: Paleta Mixta -->
+                <div class="zw-lot-card">
+                    <div class="zw-lot-image">
+                        <img src="assets/images/lote_mixto.png" alt="Lote Paleta Mixta">
+                        <span class="zw-lot-badge" data-i18n="zw_lot3_badge">Lana mixta</span>
+                    </div>
+                    <div class="zw-lot-content">
+                        <h3 data-i18n="zw_lot3_title">Paleta Mixta</h3>
+                        <p data-i18n="zw_lot3_desc">Variedad de colores y texturas. Para proyectos que requieren diversidad de materia prima.</p>
+                        <div class="zw-lot-tags">
+                            <span class="zw-lot-tag">Variado</span>
+                            <span class="zw-lot-tag">Según disponibilidad</span>
+                        </div>
+                        <a href="contacto.html?asunto=Consulta%20Lote%20Paleta%20Mixta&mensaje=Hola,%20quisiera%20consultar%20por%20la%20disponibilidad%20del%20Lote%20de%20Recortes%20Paleta%20Mixta." class="zw-lot-link" data-i18n="zw_consultar_disponibilidad">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <!-- Brand Column -->
+                <div class="footer-column">
+                    <div class="logo-container footer-logo">
+                        <img src="assets/images/logo.png" alt="Agrotimes Icon" class="logo-img">
+                        <div class="logo-text">AGROTIMES <span>S.A.</span></div>
+                    </div>
+                    <p class="footer-desc" data-i18n="footer_desc">Líderes en la producción artesanal y exportación de
+                        cueros lanares de origen
+                        uruguayo. Calidad certificada internacionalmente para los mercados globales más exigentes.</p>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg></a>
+                        <a href="#" class="footer-social-link"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4 data-i18n="footer_contacto">CONTACTO</h4>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        <a href="https://www.google.com/maps?cid=11407827468349068774" target="_blank"
+                            style="color: inherit; text-decoration: none;">San Ramon 803<br>11800 Montevideo,
+                            Uruguay</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        <a href="tel:+59822002313" style="color: inherit; text-decoration: none;">(+598) 2 2002313</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        <a href="mailto:info@agrotimes.com.uy"
+                            style="color: inherit; text-decoration: none;">info@agrotimes.com.uy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div data-i18n="footer_copyright">&copy; 2026 AGROTIMES S.A. Todos los derechos reservados.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>

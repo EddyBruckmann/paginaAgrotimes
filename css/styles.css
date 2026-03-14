@@ -783,6 +783,75 @@ nav.container {
     line-height: 1.25;
 }
 
+/* Nuestro Proceso Section (Landing Preview) - Aligned with Heritage */
+.process-preview-section {
+    padding: srem 0;
+    background-color: var(--white);
+}
+
+.process-preview-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.process-preview-image {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 16/10;
+    border: 1px solid rgba(44, 34, 28, 0.05);
+}
+
+.process-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.process-preview-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.process-preview-content .badge {
+    margin-bottom: 1rem;
+}
+
+.process-preview-content h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.process-preview-content p {
+    color: rgba(44, 34, 28, 0.7);
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .process-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .process-preview-image {
+        order: -1;
+    }
+
+    .process-preview-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
 /* Categorias Premium */
 .categories-section {
     padding: 6rem 0;
