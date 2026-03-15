@@ -96,13 +96,40 @@
 
         .form-control {
             width: 100%;
-            padding: 1rem;
+            padding: 0.8rem;
             border: 1px solid var(--gray-light);
             border-radius: 0.5rem;
             font-family: var(--font-body);
-            font-size: 1rem;
+            font-size: 0.92rem;
             background: #FAFAFA;
             transition: var(--transition);
+        }
+
+        /* Prevent cutoff in smaller screens/shorter inputs */
+        .form-control::placeholder {
+            font-size: 0.9rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        /* Required field style */
+        [data-i18n$="asunto"]::after,
+        [data-i18n$="nombre"]::after,
+        [data-i18n$="email"]::after,
+        [data-i18n$="mensaje"]::after {
+            content: ''; /* We'll use the asterisk from i18n data instead for simplicity */
+        }
+
+        /* If we want to color the asterisk precisely if it's part of the text */
+        .required-indicator {
+            color: var(--primary-color);
+            margin-left: 2px;
         }
 
         .form-control:focus {
@@ -294,49 +321,39 @@
 
                 <!-- Form Column -->
                 <div class="contact-form">
-                    <h2 data-i18n="contact_form_title" style="margin-bottom: 2rem;">Envíenos un Mensaje</h2>
+                    <h2 data-i18n="contact_form_title">Envíenos un Mensaje</h2>
                     <form action="#" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <label
-                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
-                                    data-i18n="contact_label_nombre">Nombre</label>
+                                <label data-i18n="contact_label_nombre">Nombre *</label>
                                 <input type="text" name="name" class="form-control" placeholder="Nombre completo"
                                     required data-i18n="contact_nombre">
                             </div>
                             <div class="form-group">
-                                <label
-                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
-                                    data-i18n="contact_label_email">Email</label>
+                                <label data-i18n="contact_label_email">Email *</label>
                                 <input type="email" name="email" class="form-control" placeholder="Correo electrónico"
                                     required data-i18n="contact_correo">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label
-                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
-                                    data-i18n="contact_label_empresa">Empresa</label>
+                                <label data-i18n="contact_label_empresa">Empresa</label>
                                 <input type="text" name="company" class="form-control"
                                     placeholder="Nombre de su empresa" data-i18n="contact_empresa">
                             </div>
                             <div class="form-group">
-                                <label
-                                    style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
-                                    data-i18n="contact_label_asunto">Asunto</label>
+                                <label data-i18n="contact_label_asunto">Asunto *</label>
                                 <input type="text" name="subject" class="form-control" placeholder="Asunto" required
                                     data-i18n="contact_asunto">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label style="display: block; font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9rem;"
-                                data-i18n="contact_label_mensaje">Mensaje</label>
+                            <label data-i18n="contact_label_mensaje">Mensaje *</label>
                             <textarea name="message" class="form-control" placeholder="Cuéntenos sobre su consulta..."
                                 required data-i18n="contact_mensaje"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary-alt btn-large" style="width: 100%;"
-                            data-i18n="contact_enviar">Enviar
-                            Mensaje</button>
+                            data-i18n="contact_enviar">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>

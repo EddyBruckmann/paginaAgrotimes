@@ -282,9 +282,31 @@ function openProductModal(productId) {
     const description = modal.querySelector('#modal-description');
     const thumbContainer = modal.querySelector('#modal-thumbnails');
 
-    // Populate data
-    title.textContent = data.title;
-    category.textContent = data.category;
+    // Populate data with i18n support
+    const productItem = document.querySelector(`.product-item[data-product-id="${productId}"]`);
+    const translatedTitle = productItem ? productItem.querySelector('h3').textContent : data.title;
+    
+    title.textContent = translatedTitle;
+    
+    // Translate category
+    const categoryKeyMap = {
+        'Prendas': 'prod_filter_prendas',
+        'Gorros': 'prod_filter_gorros',
+        'Mitones': 'prod_filter_mitones',
+        'Cueros': 'cat_cueros'
+    };
+    
+    let translatedCat = data.category;
+    if (typeof translations !== 'undefined' && typeof currentLang !== 'undefined') {
+        const t = translations[currentLang];
+        const key = categoryKeyMap[data.category];
+        if (t && key && t[key]) {
+            translatedCat = t[key];
+        }
+    }
+    category.textContent = translatedCat;
+
+    // Use specific description if it exists in data, otherwise default
     description.textContent = data.description;
     mainImg.src = data.images[0];
 
@@ -293,7 +315,7 @@ function openProductModal(productId) {
     data.images.forEach((imgSrc, index) => {
         const thumb = document.createElement('div');
         thumb.className = `thumb-item ${index === 0 ? 'active' : ''}`;
-        thumb.innerHTML = `<img src="${imgSrc}" alt="${data.title} view ${index + 1}">`;
+        thumb.innerHTML = `<img src="${imgSrc}" alt="${translatedTitle} view ${index + 1}">`;
         thumb.addEventListener('click', () => {
             mainImg.src = imgSrc;
             thumbContainer.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
@@ -302,11 +324,19 @@ function openProductModal(productId) {
         thumbContainer.appendChild(thumb);
     });
 
-    // Update contact link with product subject and message
+    // Update contact link with localized subject and message
     const contactBtn = modal.querySelector('.modal-actions .btn');
     if (contactBtn) {
-        const subject = encodeURIComponent(`Consulta por ${data.title}`);
-        const message = encodeURIComponent(`Hola, me gustaría recibir más información y asesoramiento sobre el producto ${data.title}. Muchas gracias.`);
+        const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+        const subjectPrefix = isEn ? 'Inquiry about' : 'Consulta por';
+        const messageHeader = isEn 
+            ? `Hello, I would like to receive more information and advice about the product`
+            : `Hola, me gustaría recibir más información y asesoramiento sobre el producto`;
+        const messageFooter = isEn ? 'Thank you very much.' : 'Muchas gracias.';
+
+        const subject = encodeURIComponent(`${subjectPrefix} ${translatedTitle}`);
+        const message = encodeURIComponent(`${messageHeader} ${translatedTitle}. ${messageFooter}`);
+        contactBtn.placeholder = translatedTitle;
         contactBtn.href = `contacto.html?asunto=${subject}&mensaje=${message}`;
     }
 
@@ -336,7 +366,7 @@ function initHoverEffect() {
         const titleEl = item.querySelector('h3');
         if (!titleEl) return;
 
-        const productId = titleEl.textContent.toLowerCase().replace(/\s+/g, '-');
+        const productId = item.getAttribute('data-product-id') || titleEl.textContent.toLowerCase().replace(/\s+/g, '-');
         const data = productData[productId];
 
         // Check if we have at least 2 images and if the second one is different from the first
@@ -391,10 +421,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Don't open modal if clicking the like button
             if (e.target.closest('.like-btn')) return;
 
-            const titleEl = item.querySelector('h3');
-            if (titleEl) {
-                const productId = titleEl.textContent.toLowerCase().replace(/\s+/g, '-');
+            const productId = item.getAttribute('data-product-id');
+            if (productId) {
                 openProductModal(productId);
+            } else {
+                // Fallback for elements without data-product-id
+                const titleEl = item.querySelector('h3');
+                if (titleEl) {
+                    const slug = titleEl.textContent.toLowerCase().replace(/\s+/g, '-');
+                    openProductModal(slug);
+                }
             }
         });
     });

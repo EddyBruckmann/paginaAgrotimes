@@ -149,14 +149,14 @@ const translations = {
         contact_redes: "Redes Sociales",
         contact_redes_link: "AGROTIMES",
         contact_form_title: "Envíenos un Mensaje",
-        contact_label_nombre: "Nombre",
-        contact_label_email: "Email",
+        contact_label_nombre: "Nombre *",
+        contact_label_email: "Email *",
         contact_label_empresa: "Empresa",
-        contact_label_asunto: "Asunto",
-        contact_label_mensaje: "Mensaje",
+        contact_label_asunto: "Asunto *",
+        contact_label_mensaje: "Mensaje *",
         contact_nombre: "Nombre completo",
         contact_correo: "Correo electrónico",
-        contact_empresa: "Nombre de su empresa (opcional)",
+        contact_empresa: "Nombre de su empresa",
         contact_asunto: "Asunto",
         contact_mensaje: "Cuéntenos sobre su consulta...",
         contact_enviar: "Enviar Mensaje",
@@ -359,14 +359,14 @@ const translations = {
         contact_redes: "Social Media",
         contact_redes_link: "AGROTIMES",
         contact_form_title: "Send us a Message",
-        contact_label_nombre: "Name",
-        contact_label_email: "Email",
+        contact_label_nombre: "Name *",
+        contact_label_email: "Email *",
         contact_label_empresa: "Company",
-        contact_label_asunto: "Subject",
-        contact_label_mensaje: "Message",
+        contact_label_asunto: "Subject *",
+        contact_label_mensaje: "Message *",
         contact_nombre: "Full name",
         contact_correo: "Email address",
-        contact_empresa: "Your company name (optional)",
+        contact_empresa: "Your company name",
         contact_asunto: "Subject",
         contact_mensaje: "Tell us about your inquiry...",
         contact_enviar: "Send Message",
@@ -453,6 +453,23 @@ function applyTranslations() {
 
     // Update html lang attribute
     document.documentElement.lang = currentLang;
+
+    // Update dynamic lot links for Zero Waste page
+    document.querySelectorAll('.zw-lot-link').forEach(link => {
+        const key = link.getAttribute('data-lot-title-key');
+        if (key && t[key]) {
+            const title = t[key];
+            const isEn = currentLang === 'en';
+            const subjectPrefix = isEn ? 'Inquiry for' : 'Consulta por';
+            const messageHeader = isEn 
+                ? `Hello, I would like to inquire about the availability of the lot`
+                : `Hola, quisiera consultar por la disponibilidad del lote`;
+            
+            const subject = encodeURIComponent(`${subjectPrefix} ${title}`);
+            const message = encodeURIComponent(`${messageHeader} ${title}.`);
+            link.href = `contacto.html?asunto=${subject}&mensaje=${message}`;
+        }
+    });
 }
 
 function toggleLanguage() {
