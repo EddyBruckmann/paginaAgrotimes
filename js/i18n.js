@@ -32,7 +32,7 @@ const translations = {
         heritage_badge: "HERENCIA FAMILIAR",
         heritage_title: "Excelencia artesanal <br>en cada detalle.",
         heritage_desc: "Nuestra pasión por el curtido tradicional se fusiona con procesos industriales de vanguardia. En AGROTIMES S.A., cada pieza cuenta una historia de dedicación, desde las pasturas naturales de Uruguay hasta los mercados más exigentes de Europa y Asia.",
-        heritage_stat1_val: "45+",
+        heritage_stat1_val: "30+",
         heritage_stat1_label: "AÑOS DE EXPERIENCIA",
         heritage_stat2_val: "10+",
         heritage_stat2_label: "PAÍSES DE EXPORTACIÓN",
@@ -77,7 +77,7 @@ const translations = {
         prod_filter_prendas: "Prendas",
         prod_filter_gorros: "Gorros",
         prod_filter_mitones: "Mitones",
-        prod_consultar: "Consultar Precio",
+        prod_consultar: "ver más información",
         prod_modal_desc: "Descripción del producto",
         prod_consultar_btn: "Consultar por este producto",
 
@@ -113,7 +113,7 @@ const translations = {
         about_title: "¿Quiénes Somos?",
         about_subtitle: "Descubra la pasión y dedicación detrás de cada una de nuestras piezas de cuero lanar.",
         about_empresa_title: "Nuestra Empresa",
-        about_p1: "Somos una empresa uruguaya dinámica, especializada en la fabricación de prendas de cuero lanar. Desde hace más de 45 años, nuestras prendas son exportadas a países tales como Estados Unidos, Canadá, Alemania, Reino Unido, entre otros.",
+        about_p1: "Somos una empresa uruguaya dinámica, especializada en la fabricación de prendas de cuero lanar. Desde hace más de 30 años, nuestras prendas son exportadas a países tales como Estados Unidos, Canadá, Alemania, Reino Unido, entre otros.",
         about_p2: "Utilizamos y seleccionamos las mejores materias primas para producir nuestras prendas. Dichas prendas pasan por un estricto control de calidad durante todo el proceso de fabricación, obteniendo así la excelente calidad que distingue a nuestros productos a nivel mundial.",
         about_p3: "Como otro rubro, trabajamos con todo tipo de cueros ovinos curtidos al cromo, en sus diferentes tipos y para los más variados usos. Siempre abiertos a las tendencias y sugerencias de nuestros clientes, nos mantenemos a la vanguardia en moda y diseño.",
         about_p4: "Nuestro propósito es estrechar vínculos con quienes confían en nosotros, construyendo relaciones duraderas basadas en la calidad y el compromiso.",
@@ -126,7 +126,7 @@ const translations = {
 
         // Quienes Somos (New)
         qs_title: "Nuestra Empresa",
-        qs_subtitle: "Más de 45 años de excelencia en cueros lanares uruguayos.",
+        qs_subtitle: "Más de 30 años de excelencia en cueros lanares uruguayos.",
         qs_historia_title: "Una Historia de Pasión",
         qs_historia_text: "Agrotimes S.A. nació como un emprendimiento familiar con la visión de llevar la calidad del cuero uruguayo a los mercados más exigentes del mundo. A través de décadas, hemos perfeccionado el arte del curtido, manteniendo un equilibrio entre la tradición artesanal y la innovación sustentable.",
         qs_valor1_title: "Calidad",
@@ -242,7 +242,7 @@ const translations = {
         heritage_badge: "FAMILY HERITAGE",
         heritage_title: "Artisan excellence <br>in every detail.",
         heritage_desc: "Our passion for traditional tanning merges with cutting-edge industrial processes. At AGROTIMES S.A., every piece tells a story of dedication, from Uruguay's natural pastures to the most demanding markets in Europe and Asia.",
-        heritage_stat1_val: "45+",
+        heritage_stat1_val: "30+",
         heritage_stat1_label: "YEARS OF EXPERIENCE",
         heritage_stat2_val: "10+",
         heritage_stat2_label: "EXPORT COUNTRIES",
@@ -287,7 +287,7 @@ const translations = {
         prod_filter_prendas: "Garments",
         prod_filter_gorros: "Hats",
         prod_filter_mitones: "Mittens",
-        prod_consultar: "Request Price",
+        prod_consultar: "More information",
         prod_modal_desc: "Product description",
         prod_consultar_btn: "Inquire about this product",
 
@@ -323,7 +323,7 @@ const translations = {
         about_title: "Who We Are",
         about_subtitle: "Discover the passion and dedication behind every one of our sheepskin leather pieces.",
         about_empresa_title: "Our Company",
-        about_p1: "We are a dynamic Uruguayan company, specialized in the manufacture of sheepskin leather garments. For over 45 years, our garments have been exported to countries such as the United States, Canada, Germany, the United Kingdom, among others.",
+        about_p1: "We are a dynamic Uruguayan company, specialized in the manufacture of sheepskin leather garments. For over 30 years, our garments have been exported to countries such as the United States, Canada, Germany, the United Kingdom, among others.",
         about_p2: "We rigorously select the finest raw materials and every garment undergoes strict quality control throughout the entire manufacturing process, achieving the excellence that distinguishes us worldwide.",
         about_p3: "As another line of business, we work with all types of chrome-tanned sheep leather, in their different varieties and for the most diverse uses. Always open to trends and client suggestions, we stay at the forefront of fashion and design.",
         about_p4: "Our purpose is to build lasting bonds with those who trust us, forging enduring relationships grounded in quality and commitment.",
@@ -336,7 +336,7 @@ const translations = {
 
         // Quienes Somos (New)
         qs_title: "Our Company",
-        qs_subtitle: "Over 45 years of excellence in Uruguayan sheepskin leather.",
+        qs_subtitle: "Over 30 years of excellence in Uruguayan sheepskin leather.",
         qs_historia_title: "A Story of Passion",
         qs_historia_text: "Agrotimes S.A. was born as a family venture with the vision of bringing the quality of Uruguayan leather to the most demanding markets in the world. Through decades, we have perfected the art of tanning, maintaining a balance between traditional craftsmanship and sustainable innovation.",
         qs_valor1_title: "Quality",
