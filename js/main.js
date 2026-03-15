@@ -77,7 +77,7 @@ const productData = {
         title: 'Dominico',
         category: 'Prendas',
         description: 'El equilibrio perfecto entre robustez y estilo. El modelo Dominico está diseñado para durar décadas, fabricado con cueros seleccionados bajo estrictos estándares de calidad.',
-        images: ['assets/images/fotos reales/dominico.png', 'assets/images/fotos reales/dominico2.png']
+        images: ['assets/images/fotos reales/dominico2.png', 'assets/images/fotos reales/dominico.png']
     },
     'rufus': {
         title: 'Rufus',
@@ -131,7 +131,7 @@ const productData = {
         title: 'AT-11',
         category: 'Prendas',
         description: 'Un modelo técnico de alta performance térmica. El AT-11 utiliza los cueros más densos de nuestra producción para asegurar confort en cualquier condición.',
-        images: ['assets/images/fotos reales/at11.png', 'assets/images/fotos reales/at11-2.png']
+        images: ['assets/images/fotos reales/at11-2.png', 'assets/images/fotos reales/at11.png']
     },
     'anne': {
         title: 'Anne',
