@@ -13,6 +13,13 @@ const translations = {
         nav_proceso: "Nuestro Proceso",
         btn_ver_mas: "Ver más",
         nav_explorar: "Explorar",
+        nav_sobre_nosotros: "Sobre nosotros",
+        nav_quienes_desc: "Nuestra historia y compromiso con la excelencia.",
+        nav_proceso_desc: "Conozca nuestro arte del curtido tradicional.",
+        nav_catalogo: "Catálogo",
+        nav_catalogo_desc: "Descubra nuestra colección premium de prendas y accesorios.",
+        nav_remanentes: "Remanentes",
+        nav_remanentes_desc: "Aproveche materiales de alta calidad en lotes exclusivos.",
 
         // Hero
         hero_badge: "TRADICIÓN URUGUAYA DESDE 1994",
@@ -39,6 +46,18 @@ const translations = {
         cat_prendas: "Prendas",
         cat_mitones: "Mitones",
         cat_gorros: "Gorros",
+
+        // Nuestro Proceso (cueros.html)
+        proceso_subtitle: "Nuestros Procesos",
+        proceso_title: "Nuestras tonalidades",
+        proceso_hero_title: "Curtido con Propósito y Tradición",
+        proceso_hero_desc: "En Agrotimes S.A., fusionamos técnicas ancestrales con tecnología de punta para minimizar el impacto ambiental. Utilizamos extractos vegetales y procesos de bajo consumo hídrico, garantizando una piel flexible, duradera y con un aroma inconfundible.",
+        proceso_step1_title: "Selección de Materia Prima",
+        proceso_step1_desc: "Solo las pieles más finas de procedencia ética pasan nuestro control de calidad inicial, garantizando una base perfecta.",
+        proceso_step2_title: "Curtido Vegetal",
+        proceso_step2_desc: "Utilizamos taninos naturales derivados de cortezas y plantas, un proceso lento que respeta el medio ambiente y la fibra.",
+        proceso_step3_title: "Acabado Artesanal",
+        proceso_step3_desc: "Cada pieza es tratada individualmente por maestros curtidores, logrando texturas únicas y una durabilidad excepcional.",
 
         // Footer
         footer_desc: "Líderes en la producción artesanal y exportación de cueros lanares de origen uruguayo. Calidad certificada internacionalmente para los mercados globales más exigentes.",
@@ -104,6 +123,20 @@ const translations = {
         location_p1: 'Nuestra sede en <strong>San Ramón 803, Montevideo</strong> se encuentra a pasos del <em>Puerto de Montevideo</em>, el principal punto de salida logística del país.',
         location_p2: "Esta cercanía nos permite gestionar de manera ágil y eficiente las exportaciones hacia los mercados que confían en nuestros productos desde hace décadas.",
         location_p3: 'Además, operamos bajo el régimen de <strong>"Puerto Libre"</strong> de Uruguay, lo que nos brinda ventajas competitivas en tiempos y costos de despacho, conectando nuestra producción artesanal con el mundo de forma directa.',
+
+        // Quienes Somos (New)
+        qs_title: "Nuestra Empresa",
+        qs_subtitle: "Más de 45 años de excelencia en cueros lanares uruguayos.",
+        qs_historia_title: "Una Historia de Pasión",
+        qs_historia_text: "Agrotimes S.A. nació como un emprendimiento familiar con la visión de llevar la calidad del cuero uruguayo a los mercados más exigentes del mundo. A través de décadas, hemos perfeccionado el arte del curtido, manteniendo un equilibrio entre la tradición artesanal y la innovación sustentable.",
+        qs_valor1_title: "Calidad",
+        qs_valor1_text: "Seleccionamos rigurosamente cada materia prima para asegurar piezas de primer nivel.",
+        qs_valor2_title: "Exportación",
+        qs_valor2_text: "Nuestra presencia global avala la confiabilidad y excelencia de nuestros productos.",
+        qs_valor3_title: "Sustentabilidad",
+        qs_valor3_text: "Comprometidos con procesos responsables que respetan nuestro entorno y comunidad.",
+        qs_location_title: "Ubicación Estratégica",
+        qs_location_text: "Operamos desde Montevideo, Uruguay, un punto clave para la producción agroindustrial de Sudamérica. Esta ubicación nos permite acceder a los mejores insumos lanares del país y gestionar una logística ágil para nuestras exportaciones globales.",
 
         // Contacto
         contact_badge: "SOPORTE AL CLIENTE",
@@ -190,6 +223,13 @@ const translations = {
         nav_proceso: "Our Process",
         btn_ver_mas: "See more",
         nav_explorar: "Explore",
+        nav_sobre_nosotros: "About Us",
+        nav_quienes_desc: "Our history and commitment to excellence.",
+        nav_proceso_desc: "Learn about our traditional tanning art.",
+        nav_catalogo: "Catalog",
+        nav_catalogo_desc: "Discover our premium collection of garments and accessories.",
+        nav_remanentes: "Remnants",
+        nav_remanentes_desc: "Take advantage of high-quality materials in exclusive lots.",
 
         // Hero
         hero_badge: "URUGUAYAN TRADITION SINCE 1994",
@@ -216,6 +256,18 @@ const translations = {
         cat_prendas: "Garments",
         cat_mitones: "Mittens",
         cat_gorros: "Hats",
+
+        // Our Process (cueros.html)
+        proceso_subtitle: "Our Processes",
+        proceso_title: "Our Tones",
+        proceso_hero_title: "Tanning with Purpose and Tradition",
+        proceso_hero_desc: "At Agrotimes S.A., we fuse ancestral techniques with cutting-edge technology to minimize environmental impact. We use vegetable extracts and low water consumption processes, guaranteeing flexible, durable skin with an unmistakable aroma.",
+        proceso_step1_title: "Raw Material Selection",
+        proceso_step1_desc: "Only the finest ethically sourced skins pass our initial quality control, guaranteeing a perfect base.",
+        proceso_step2_title: "Vegetable Tanning",
+        proceso_step2_desc: "We use natural tannins derived from bark and plants, a slow process that respects the environment and the fiber.",
+        proceso_step3_title: "Artisanal Finish",
+        proceso_step3_desc: "Each piece is individually treated by master tanners, achieving unique textures and exceptional durability.",
 
         // Footer
         footer_desc: "Leaders in artisan production and export of sheepskin leathers of Uruguayan origin. Internationally certified quality for the most demanding global markets.",
@@ -281,6 +333,20 @@ const translations = {
         location_p1: 'Our headquarters at <strong>San Ramón 803, Montevideo</strong> is located steps away from the <em>Port of Montevideo</em>, the country\'s main logistics hub.',
         location_p2: "This proximity allows us to manage exports efficiently and swiftly to the markets that have trusted our products for decades.",
         location_p3: 'Additionally, we operate under Uruguay\'s <strong>"Free Port"</strong> regime, giving us competitive advantages in shipping times and costs, connecting our artisan production directly with the world.',
+
+        // Quienes Somos (New)
+        qs_title: "Our Company",
+        qs_subtitle: "Over 45 years of excellence in Uruguayan sheepskin leather.",
+        qs_historia_title: "A Story of Passion",
+        qs_historia_text: "Agrotimes S.A. was born as a family venture with the vision of bringing the quality of Uruguayan leather to the most demanding markets in the world. Through decades, we have perfected the art of tanning, maintaining a balance between traditional craftsmanship and sustainable innovation.",
+        qs_valor1_title: "Quality",
+        qs_valor1_text: "We rigorously select each raw material to ensure top-level pieces.",
+        qs_valor2_title: "Export",
+        qs_valor2_text: "Our global presence endorses the reliability and excellence of our products.",
+        qs_valor3_title: "Sustainability",
+        qs_valor3_text: "Committed to responsible processes that respect our environment and community.",
+        qs_location_title: "Strategic Location",
+        qs_location_text: "We operate from Montevideo, Uruguay, a key point for agro-industrial production in South America. This location allows us to access the best sheepskin inputs in the country and manage agile logistics for our global exports.",
 
         // Contacto
         contact_badge: "CUSTOMER SUPPORT",
